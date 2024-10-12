@@ -34,3 +34,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## TODO 
+### Backend
+1. сделать формление заказа
+
+### Frontend
+1. Сделать обработку ошибок для авторизации и сброса почты
+2. Исправить запрет на скролл при успешной авторизации
+3. Сделать кнопки анимированными на авторизации
+4. сделать роут для активации таба вишлист

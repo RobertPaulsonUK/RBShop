@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strum</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.jpg" />
+    <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+    <!--=include header-mod.html -->
+    <div class="wrapper">
+        <main class="main">
+            <div class="pt-[200px] mb-6 sm:pt-[170px]">
+                <div class="container">
+                    <div class="flex items-center justify-start">
+                        <a class="text-[#AEAEAE] text-sm relative mr-[10px] pr-[10px] block hover:text-[#46B1F0] after:block after:content-[''] after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-[url('/images/dist/breadcrumbs.svg')] after:w-[2px] after:h-[16px] after:bg-no-repeat"
+                            href="">Головна</a>
+                        <a class="text-[#AEAEAE] text-sm relative mr-[10px] pr-[10px] block hover:text-[#46B1F0] after:block after:content-[''] after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-[url('/images/dist/breadcrumbs.svg')] after:w-[2px] after:h-[16px] after:bg-no-repeat"
+                            href="">Товари та послуги</a>
+                        <div class="text-[#46B1F0] text-sm">Блоки живлення для ноутбуків</div>
+                    </div>
+                </div>
+            </div>
+            <section class="">
+                <div class="container">
+                    <div
+                        class="text-[40px] leading-[48px] font-semibold text-[#46B1F0] mb-10 sm:text-[32px] sm:leading-[34px] sm:mb-5 sm:font-medium">
+                        Блоки живлення для ноутбуків</div>
+                    <div class="flex items-start justify-start gap-[120px] lg:gap-8 relative">
+                        <a class="filter_btn hidden md:flex items-center justify-start absolute top-2 left-0" href="">
+                            <div class="text-xl font-medium text-[#46B1F0]">Фільтр</div>
+                            <img src="images/dist/goods/filter.svg" alt="filter">
+                        </a>
+                        <div
+                            class="sidebar mt-4 md:opacity-0 md:invisible md:duration-200 md:h-[460px] md:overflow-scroll md:absolute md:top-7 md:-left-4 md:z-30 md:bg-[#F6F6F6] md:py-2 md:px-4 md:shadow_mod">
+                            <div class="mb-[50px] md:mb-5">
+                                <div class="text-[#46B1F0] text-lg font-medium mb-3">Ціна</div>
+                                <div class="range-slider">
+                                    <span class="range-min-wrapper">
+                                        <input class="range-min" type="range" min="0" max="100" value="25">
+                                    </span>
+                                    <span class="range-max-wrapper">
+                                        <input class="range-max" type="range" min="0" max="100" value="100">
+                                    </span>
+                                </div>
+                                <div class="flex items-center justify-center gap-4 mt-3">
+                                    <div class="flex items-center justify-start gap-4">
+                                        <div class="text-sm font-medium text-[#333E48]">Від</div>
+                                        <input
+                                            class="p-3 rounded-lg bg-[#F6F6F6] border border-solid boreder-[#AEAEAE] shadow_mod text-sm w-[58px]"
+                                            type="text" placeholder="0">
+                                    </div>
+                                    <div class="flex items-center justify-start gap-4">
+                                        <div class="text-sm font-medium text-[#333E48]">до</div>
+                                        <input
+                                            class="p-3 rounded-lg bg-[#F6F6F6] border border-solid boreder-[#AEAEAE] shadow_mod text-sm w-[58px]"
+                                            type="text" placeholder="1000">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-[50px] md:mb-5">
+                                <div
+                                    class="text-[#46B1F0] text-xl font-medium border-b border-solid border-[#46B1F0] w-full mb-4">
+                                    Фільтр</div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-[50px] md:mb-5">
+                                <div
+                                    class="text-[#46B1F0] text-xl font-medium border-b border-solid border-[#46B1F0] w-full mb-4">
+                                    Фільтр</div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-[50px] md:mb-5">
+                                <div
+                                    class="text-[#46B1F0] text-xl font-medium border-b border-solid border-[#46B1F0] w-full mb-4">
+                                    Фільтр</div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                                <div class="mb-[10px] block min-h-[1.5rem] ps-[1.5rem]">
+                                    <input
+                                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.15rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:inset-0 before:bg-transparent before:opacity-0 before:transition-[background-color_0.2s,transform_0.2s] before:content-[''] hover:before:bg-[#46b1f080] hover:before:opacity-100 hover:before:rounded-none checked:bg-primary checked:before:bg-transparent checked:after:content-[''] checked:after:absolute checked:after:inset-0 checked:after:m-auto checked:after:h-[10px] checked:after:w-[10px] checked:after:bg-[#46B1F0] checked:after:rounded-[2px] rtl:float-right dark:border-[#46B1F0] dark:checked:border-primary dark:checked:bg-primary"
+                                        type="checkbox" value="" id="customCheckbox" />
+                                    <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customCheckbox">
+                                        Форма
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="md:sticky md:-bottom-2 md:-left-0 md:-right-0 md:bg-[#F6F6F6] md:p-3">
+                                <button
+                                    class="modal_btn_thank py-[10px] px-5 block rounded-[40px] bg-[#46B1F0] border-none cursor-pointer text-[#F6F6F6] text-sm font-medium hover:bg-[linear-gradient(90deg,#46B1F0_0%,#005BA9_100%)]  hover:shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] duration-200 md:mx-auto md:w-full">Застосувати</button>
+                            </div>
+                        </div>
+                        <div
+                            class="goods__items w-full grid grid-cols-3 gap-x-4 gap-y-10 lg:grid-cols-2 md:mt-[88px] sm:gap-x-2 sm:gap-y-3 relative sm:mt-[70px]">
+                            <div class="absolute -top-[80px] right-0 flex items-center justify-center gap-4">
+                                <svg class="sorting_col active duration-200 cursor-pointer" width="36" height="36"
+                                    viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9 0H1.28571C0.944722 0 0.617695 0.135459 0.376577 0.376577C0.135459 0.617695 0 0.944722 0 1.28571V9C0 9.34099 0.135459 9.66802 0.376577 9.90914C0.617695 10.1503 0.944722 10.2857 1.28571 10.2857H9C9.34099 10.2857 9.66802 10.1503 9.90914 9.90914C10.1503 9.66802 10.2857 9.34099 10.2857 9V1.28571C10.2857 0.944722 10.1503 0.617695 9.90914 0.376577C9.66802 0.135459 9.34099 0 9 0ZM21.8571 12.8571H14.1429C13.8019 12.8571 13.4748 12.9926 13.2337 13.2337C12.9926 13.4748 12.8571 13.8019 12.8571 14.1429V21.8571C12.8571 22.1981 12.9926 22.5252 13.2337 22.7663C13.4748 23.0074 13.8019 23.1429 14.1429 23.1429H21.8571C22.1981 23.1429 22.5252 23.0074 22.7663 22.7663C23.0074 22.5252 23.1429 22.1981 23.1429 21.8571V14.1429C23.1429 13.8019 23.0074 13.4748 22.7663 13.2337C22.5252 12.9926 22.1981 12.8571 21.8571 12.8571Z"
+                                        fill="#AEAEAE" />
+                                    <path
+                                        d="M14.1428 0H21.8571C22.1981 0 22.5251 0.135459 22.7662 0.376577C23.0074 0.617695 23.1428 0.944722 23.1428 1.28571V9C23.1428 9.34099 23.0074 9.66802 22.7662 9.90914C22.5251 10.1503 22.1981 10.2857 21.8571 10.2857H14.1428C13.8018 10.2857 13.4748 10.1503 13.2337 9.90914C12.9926 9.66802 12.8571 9.34099 12.8571 9V1.28571C12.8571 0.944722 12.9926 0.617695 13.2337 0.376577C13.4748 0.135459 13.8018 0 14.1428 0ZM1.28568 12.8571H8.99997C9.34096 12.8571 9.66798 12.9926 9.9091 13.2337C10.1502 13.4748 10.2857 13.8019 10.2857 14.1429V21.8571C10.2857 22.1981 10.1502 22.5252 9.9091 22.7663C9.66798 23.0074 9.34096 23.1429 8.99997 23.1429H1.28568C0.944687 23.1429 0.617661 23.0074 0.376541 22.7663C0.135424 22.5252 -3.43323e-05 22.1981 -3.43323e-05 21.8571V14.1429C-3.43323e-05 13.8019 0.135424 13.4748 0.376541 13.2337C0.617661 12.9926 0.944687 12.8571 1.28568 12.8571Z"
+                                        fill="#AEAEAE" />
+                                    <path
+                                        d="M34.7143 0H27C26.659 0 26.332 0.135459 26.0909 0.376577C25.8497 0.617695 25.7143 0.944722 25.7143 1.28571V9C25.7143 9.34099 25.8497 9.66802 26.0909 9.90914C26.332 10.1503 26.659 10.2857 27 10.2857H34.7143C35.0553 10.2857 35.3823 10.1503 35.6234 9.90914C35.8645 9.66802 36 9.34099 36 9V1.28571C36 0.944722 35.8645 0.617695 35.6234 0.376577C35.3823 0.135459 35.0553 0 34.7143 0Z"
+                                        fill="#AEAEAE" />
+                                    <path
+                                        d="M34.7143 25.7142H27C26.659 25.7142 26.332 25.8497 26.0909 26.0908C25.8497 26.3319 25.7143 26.659 25.7143 26.9999V34.7142C25.7143 35.0552 25.8497 35.3823 26.0909 35.6234C26.332 35.8645 26.659 35.9999 27 35.9999H34.7143C35.0553 35.9999 35.3823 35.8645 35.6234 35.6234C35.8645 35.3823 36 35.0552 36 34.7142V26.9999C36 26.659 35.8645 26.3319 35.6234 26.0908C35.3823 25.8497 35.0553 25.7142 34.7143 25.7142Z"
+                                        fill="#AEAEAE" />
+                                    <path
+                                        d="M34.7143 12.8572H27C26.659 12.8572 26.332 12.9926 26.0909 13.2338C25.8497 13.4749 25.7143 13.8019 25.7143 14.1429V21.8572C25.7143 22.1982 25.8497 22.5252 26.0909 22.7663C26.332 23.0074 26.659 23.1429 27 23.1429H34.7143C35.0553 23.1429 35.3823 23.0074 35.6234 22.7663C35.8645 22.5252 36 22.1982 36 21.8572V14.1429C36 13.8019 35.8645 13.4749 35.6234 13.2338C35.3823 12.9926 35.0553 12.8572 34.7143 12.8572Z"
+                                        fill="#AEAEAE" />
+                                    <path
+                                        d="M21.8571 25.7142H14.1428C13.8018 25.7142 13.4748 25.8497 13.2337 26.0908C12.9926 26.3319 12.8571 26.659 12.8571 26.9999V34.7142C12.8571 35.0552 12.9926 35.3823 13.2337 35.6234C13.4748 35.8645 13.8018 35.9999 14.1428 35.9999H21.8571C22.1981 35.9999 22.5251 35.8645 22.7662 35.6234C23.0074 35.3823 23.1428 35.0552 23.1428 34.7142V26.9999C23.1428 26.659 23.0074 26.3319 22.7662 26.0908C22.5251 25.8497 22.1981 25.7142 21.8571 25.7142Z"
+                                        fill="#AEAEAE" />
+                                    <path
+                                        d="M8.99993 25.7142H1.28564C0.944652 25.7142 0.617626 25.8497 0.376508 26.0908C0.135389 26.3319 -6.96182e-05 26.659 -6.96182e-05 26.9999V34.7142C-6.96182e-05 35.0552 0.135389 35.3823 0.376508 35.6234C0.617626 35.8645 0.944652 35.9999 1.28564 35.9999H8.99993C9.34092 35.9999 9.66795 35.8645 9.90907 35.6234C10.1502 35.3823 10.2856 35.0552 10.2856 34.7142V26.9999C10.2856 26.659 10.1502 26.3319 9.90907 26.0908C9.66795 25.8497 9.34092 25.7142 8.99993 25.7142Z"
+                                        fill="#AEAEAE" />
+                                </svg>
+                                <svg class="sorting_row cursor-pointer duration-200" width="36" height="36"
+                                    viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="36" height="10.2" rx="1.5" fill="#AEAEAE" />
+                                    <rect x="-0.00012207" y="12.9" width="36" height="10.2" rx="1.5" fill="#AEAEAE" />
+                                    <rect x="-0.00012207" y="25.8" width="36" height="10.2" rx="1.5" fill="#AEAEAE" />
+                                </svg>
+                            </div>
+                            <div class="goods__item rounded-2xl w-full hover:shadow-xl duration-200 relative">
+                                <div
+                                    class="goods__item-new absolute top-0 right-0 py-2 px-10 bg-[#005BA9] rounded-bl-[20px] rounded-tr-[20px] text-sm font-normal text-[#F6F6F6] shadow_mod sm:px-4">
+                                    Новинка</div>
+                                <a class="goods__item-photo mb-4 w-full block" href="">
+                                    <img class="w-full rounded-tl-2xl rounded-tr-2xl"
+                                        src="images/dist/goods/goods-1.webp" alt="goods-1">
+                                </a>
+                                <div class="goods__item-details px-2 pb-2 relative">
+                                    <a class="goods__item-details-like absolute right-2 xl:bottom-[60px]" href="">
+                                        <svg class="group duration-200" width="36" height="36" viewBox="0 0 36 36"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect class="group-hover:fill-[#46B1F0] duration-200" width="36" height="36"
+                                                rx="18" fill="#F7F7F7" />
+                                            <path
+                                                class="group-hover:stroke-[#F6F6F6] group-hover:fill-[#F6F6F6] duration-200"
+                                                d="M17.9192 11.7307C18.3489 11.2437 18.8752 10.7675 19.4983 10.302C20.1213 9.83651 20.8411 9.53931 21.6575 9.4104C22.4023 9.31014 23.0898 9.33879 23.72 9.49634C24.3359 9.65389 24.8909 9.90454 25.385 10.2483C25.8792 10.592 26.2909 11.0146 26.6204 11.5159C26.9641 12.0028 27.2148 12.5185 27.3723 13.0627C27.5442 13.6643 27.6265 14.3375 27.6194 15.0823C27.6122 15.8271 27.5012 16.5146 27.2864 17.1448C26.9713 17.9612 26.5631 18.6988 26.0618 19.3577C25.5461 20.0165 24.9804 20.636 24.3645 21.2161C23.7486 21.7961 23.1112 22.3512 22.4524 22.8811C21.7935 23.4111 21.1562 23.9482 20.5403 24.4924C20.3971 24.6643 20.2216 24.8505 20.0139 25.051C19.8062 25.2515 19.5806 25.4377 19.3372 25.6096C19.1939 25.7528 19.0077 25.9677 18.7786 26.2542C18.5494 26.5406 18.3059 26.6838 18.0481 26.6838C17.8189 26.6838 17.6184 26.5943 17.4465 26.4153C17.2747 26.2362 17.1028 26.0393 16.9309 25.8245C16.3866 25.2229 15.7922 24.6571 15.1477 24.1272C14.5175 23.5972 13.8801 23.0673 13.2356 22.5374C12.5911 22.0074 11.9752 21.456 11.3879 20.8831C10.7864 20.3101 10.2564 19.6799 9.7981 18.9924C9.55461 18.6344 9.31828 18.219 9.08911 17.7463C8.87427 17.2594 8.70239 16.7402 8.57349 16.1887C8.44458 15.6373 8.38013 15.068 8.38013 14.4807C8.38013 13.8935 8.48039 13.3062 8.68091 12.719C8.99601 11.8023 9.54028 11.0181 10.3137 10.3665C11.0872 9.71476 12.0754 9.36743 13.2786 9.32446C14.4387 9.26717 15.3625 9.5035 16.05 10.0334C16.7375 10.5634 17.3606 11.1292 17.9192 11.7307ZM23.8489 19.1213C24.2929 18.6773 24.7262 18.151 25.1487 17.5422C25.5712 16.9335 25.8398 16.2424 25.9543 15.469C26.0546 14.5523 25.9364 13.7467 25.5999 13.052C25.2633 12.3573 24.7942 11.8453 24.1926 11.5159C23.9778 11.4156 23.6913 11.3189 23.3333 11.2258C22.9752 11.1327 22.6028 11.0862 22.2161 11.0862C21.7291 11.1292 21.2708 11.2867 20.8411 11.5588C20.4114 11.831 20.0676 12.0745 19.8098 12.2893C19.6809 12.3896 19.5413 12.5185 19.3909 12.676C19.2405 12.8336 19.0793 12.9911 18.9075 13.1487C18.7356 13.3206 18.5995 13.4924 18.4993 13.6643C18.399 13.8362 18.2056 13.9221 17.9192 13.9221C17.7043 13.9221 17.5146 13.8362 17.3499 13.6643C17.1851 13.4924 17.0455 13.3206 16.9309 13.1487C16.759 13.0055 16.5979 12.8551 16.4475 12.6975C16.2971 12.54 16.1575 12.4039 16.0286 12.2893C15.7135 12.0172 15.3554 11.7486 14.9543 11.4836C14.5533 11.2187 14.0806 11.0862 13.5364 11.0862C12.4908 11.1292 11.6529 11.4801 11.0227 12.1389C10.3925 12.7978 10.0559 13.6213 10.0129 14.6096C9.95565 15.3114 10.038 15.9452 10.26 16.511C10.482 17.0767 10.7577 17.5745 11.0872 18.0042C11.5312 18.6344 12.0468 19.2288 12.634 19.7874C13.2213 20.3316 13.8264 20.8652 14.4495 21.3879C15.0725 21.9107 15.692 22.4371 16.3079 22.967C16.9094 23.4827 17.4465 24.0341 17.9192 24.6213C18.3632 24.1344 18.8287 23.6617 19.3157 23.2034C19.8027 22.7594 20.3004 22.3153 20.8088 21.8713C21.3173 21.4273 21.8293 20.9833 22.345 20.5393C22.8463 20.0953 23.3476 19.6226 23.8489 19.1213Z"
+                                                fill="#46B1F0" />
+                                        </svg>
+                                    </a>
+                                    <a class="goods__item-details-title mb-4 text-sm text-[#333E48] max-w-[228px] block"
+                                        href="">Блок живлення
+                                        Apple
+                                        MacBook
+                                        18.5V 4.6A 85W MagSafe 1</a>
+                                    <div class="goods__item-details-mini">
+                                        <div class="goods__item-details-mini-title">Бренд: <span>Apple</span></div>
+                                        <div class="goods__item-details-mini-title">Напруга: <span>18.5V</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Сила струму: <span>18.5V</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Потужність: <span>85W</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Роз'єм: <span>MagSafe 1</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Гарантійний термін:
+                                            <span>6 місяців</span></div>
+                                    </div>
+                                    <div
+                                        class="goods__item-details-price-wrapper flex justify-between items-center xl:flex-col xl:items-start">
+                                        <div class="">
+                                            <div
+                                                class="goods__item-details-price-old text-xs font-normal text-center line-through text-[#AEAEAE]">
+                                                1,249грн
+                                            </div>
+                                            <div class="goods__item-details-price text-2xl text-[#333E48] font-bold">
+                                                749<span class="text-xs text-[#333E48] font-bold">грн</span></div>
+                                        </div>
+                                        <a class="goods__item-details-btn relative min-w-[107px] py-[10px]  px-5 rounded-[40px] bg-[#46B1F0] text-white hover:bg-[linear-gradient(90deg,#46B1F0_0%,#005BA9_100%)]  hover:shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] duration-200 flex items-center justify-center gap-2 xl:mx-auto sm:w-full sm:text-center"
+                                            href="">Купити<span
+                                                class="block content-[''] bg-[url('/images/dist/goods/buy.svg')] bg-no-repeat bg-cover w-5 h-5 "></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goods__item rounded-2xl w-full hover:shadow-xl duration-200 relative">
+                                <a class="goods__item-photo mb-4 w-full block" href="">
+                                    <img class="w-full rounded-tl-2xl rounded-tr-2xl"
+                                        src="images/dist/goods/goods-1.webp" alt="goods-1">
+                                </a>
+                                <div class="goods__item-details px-2 pb-2 relative">
+                                    <a class="goods__item-details-like absolute right-2 xl:bottom-[60px]" href="">
+                                        <svg class="group duration-200" width="36" height="36" viewBox="0 0 36 36"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect class="group-hover:fill-[#46B1F0] duration-200" width="36" height="36"
+                                                rx="18" fill="#F7F7F7" />
+                                            <path
+                                                class="group-hover:stroke-[#F6F6F6] group-hover:fill-[#F6F6F6] duration-200"
+                                                d="M17.9192 11.7307C18.3489 11.2437 18.8752 10.7675 19.4983 10.302C20.1213 9.83651 20.8411 9.53931 21.6575 9.4104C22.4023 9.31014 23.0898 9.33879 23.72 9.49634C24.3359 9.65389 24.8909 9.90454 25.385 10.2483C25.8792 10.592 26.2909 11.0146 26.6204 11.5159C26.9641 12.0028 27.2148 12.5185 27.3723 13.0627C27.5442 13.6643 27.6265 14.3375 27.6194 15.0823C27.6122 15.8271 27.5012 16.5146 27.2864 17.1448C26.9713 17.9612 26.5631 18.6988 26.0618 19.3577C25.5461 20.0165 24.9804 20.636 24.3645 21.2161C23.7486 21.7961 23.1112 22.3512 22.4524 22.8811C21.7935 23.4111 21.1562 23.9482 20.5403 24.4924C20.3971 24.6643 20.2216 24.8505 20.0139 25.051C19.8062 25.2515 19.5806 25.4377 19.3372 25.6096C19.1939 25.7528 19.0077 25.9677 18.7786 26.2542C18.5494 26.5406 18.3059 26.6838 18.0481 26.6838C17.8189 26.6838 17.6184 26.5943 17.4465 26.4153C17.2747 26.2362 17.1028 26.0393 16.9309 25.8245C16.3866 25.2229 15.7922 24.6571 15.1477 24.1272C14.5175 23.5972 13.8801 23.0673 13.2356 22.5374C12.5911 22.0074 11.9752 21.456 11.3879 20.8831C10.7864 20.3101 10.2564 19.6799 9.7981 18.9924C9.55461 18.6344 9.31828 18.219 9.08911 17.7463C8.87427 17.2594 8.70239 16.7402 8.57349 16.1887C8.44458 15.6373 8.38013 15.068 8.38013 14.4807C8.38013 13.8935 8.48039 13.3062 8.68091 12.719C8.99601 11.8023 9.54028 11.0181 10.3137 10.3665C11.0872 9.71476 12.0754 9.36743 13.2786 9.32446C14.4387 9.26717 15.3625 9.5035 16.05 10.0334C16.7375 10.5634 17.3606 11.1292 17.9192 11.7307ZM23.8489 19.1213C24.2929 18.6773 24.7262 18.151 25.1487 17.5422C25.5712 16.9335 25.8398 16.2424 25.9543 15.469C26.0546 14.5523 25.9364 13.7467 25.5999 13.052C25.2633 12.3573 24.7942 11.8453 24.1926 11.5159C23.9778 11.4156 23.6913 11.3189 23.3333 11.2258C22.9752 11.1327 22.6028 11.0862 22.2161 11.0862C21.7291 11.1292 21.2708 11.2867 20.8411 11.5588C20.4114 11.831 20.0676 12.0745 19.8098 12.2893C19.6809 12.3896 19.5413 12.5185 19.3909 12.676C19.2405 12.8336 19.0793 12.9911 18.9075 13.1487C18.7356 13.3206 18.5995 13.4924 18.4993 13.6643C18.399 13.8362 18.2056 13.9221 17.9192 13.9221C17.7043 13.9221 17.5146 13.8362 17.3499 13.6643C17.1851 13.4924 17.0455 13.3206 16.9309 13.1487C16.759 13.0055 16.5979 12.8551 16.4475 12.6975C16.2971 12.54 16.1575 12.4039 16.0286 12.2893C15.7135 12.0172 15.3554 11.7486 14.9543 11.4836C14.5533 11.2187 14.0806 11.0862 13.5364 11.0862C12.4908 11.1292 11.6529 11.4801 11.0227 12.1389C10.3925 12.7978 10.0559 13.6213 10.0129 14.6096C9.95565 15.3114 10.038 15.9452 10.26 16.511C10.482 17.0767 10.7577 17.5745 11.0872 18.0042C11.5312 18.6344 12.0468 19.2288 12.634 19.7874C13.2213 20.3316 13.8264 20.8652 14.4495 21.3879C15.0725 21.9107 15.692 22.4371 16.3079 22.967C16.9094 23.4827 17.4465 24.0341 17.9192 24.6213C18.3632 24.1344 18.8287 23.6617 19.3157 23.2034C19.8027 22.7594 20.3004 22.3153 20.8088 21.8713C21.3173 21.4273 21.8293 20.9833 22.345 20.5393C22.8463 20.0953 23.3476 19.6226 23.8489 19.1213Z"
+                                                fill="#46B1F0" />
+                                        </svg>
+                                    </a>
+                                    <a class="goods__item-details-title mb-4 text-sm text-[#333E48] max-w-[228px] block"
+                                        href="">Блок живлення
+                                        Apple
+                                        MacBook
+                                        18.5V 4.6A 85W MagSafe 1</a>
+                                    <div class="goods__item-details-mini">
+                                        <div class="goods__item-details-mini-title">Бренд: <span>Apple</span></div>
+                                        <div class="goods__item-details-mini-title">Напруга: <span>18.5V</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Сила струму: <span>18.5V</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Потужність: <span>85W</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Роз'єм: <span>MagSafe 1</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Гарантійний термін:
+                                            <span>6 місяців</span></div>
+                                    </div>
+                                    <div
+                                        class="goods__item-details-price-wrapper flex justify-between items-center xl:flex-col xl:items-start">
+                                        <div class="">
+                                            <div
+                                                class="goods__item-details-price-old text-xs font-normal text-center line-through text-[#AEAEAE]">
+                                                1,249грн
+                                            </div>
+                                            <div class="goods__item-details-price text-2xl text-[#333E48] font-bold">
+                                                749<span class="text-xs text-[#333E48] font-bold">грн</span></div>
+                                        </div>
+                                        <a class="goods__item-details-btn relative min-w-[107px] py-[10px]  px-5 rounded-[40px] bg-[#46B1F0] text-white hover:bg-[linear-gradient(90deg,#46B1F0_0%,#005BA9_100%)]  hover:shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] duration-200 flex items-center justify-center gap-2 xl:mx-auto sm:w-full sm:text-center"
+                                            href="">Купити<span
+                                                class="block content-[''] bg-[url('/images/dist/goods/buy.svg')] bg-no-repeat bg-cover w-5 h-5 "></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goods__item rounded-2xl w-full hover:shadow-xl duration-200 relative">
+                                <a class="goods__item-photo mb-4 w-full block" href="">
+                                    <img class="w-full rounded-tl-2xl rounded-tr-2xl"
+                                        src="images/dist/goods/goods-1.webp" alt="goods-1">
+                                </a>
+                                <div class="goods__item-details px-2 pb-2 relative">
+                                    <a class="goods__item-details-like absolute right-2 xl:bottom-[60px]" href="">
+                                        <svg class="group duration-200" width="36" height="36" viewBox="0 0 36 36"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect class="group-hover:fill-[#46B1F0] duration-200" width="36" height="36"
+                                                rx="18" fill="#F7F7F7" />
+                                            <path
+                                                class="group-hover:stroke-[#F6F6F6] group-hover:fill-[#F6F6F6] duration-200"
+                                                d="M17.9192 11.7307C18.3489 11.2437 18.8752 10.7675 19.4983 10.302C20.1213 9.83651 20.8411 9.53931 21.6575 9.4104C22.4023 9.31014 23.0898 9.33879 23.72 9.49634C24.3359 9.65389 24.8909 9.90454 25.385 10.2483C25.8792 10.592 26.2909 11.0146 26.6204 11.5159C26.9641 12.0028 27.2148 12.5185 27.3723 13.0627C27.5442 13.6643 27.6265 14.3375 27.6194 15.0823C27.6122 15.8271 27.5012 16.5146 27.2864 17.1448C26.9713 17.9612 26.5631 18.6988 26.0618 19.3577C25.5461 20.0165 24.9804 20.636 24.3645 21.2161C23.7486 21.7961 23.1112 22.3512 22.4524 22.8811C21.7935 23.4111 21.1562 23.9482 20.5403 24.4924C20.3971 24.6643 20.2216 24.8505 20.0139 25.051C19.8062 25.2515 19.5806 25.4377 19.3372 25.6096C19.1939 25.7528 19.0077 25.9677 18.7786 26.2542C18.5494 26.5406 18.3059 26.6838 18.0481 26.6838C17.8189 26.6838 17.6184 26.5943 17.4465 26.4153C17.2747 26.2362 17.1028 26.0393 16.9309 25.8245C16.3866 25.2229 15.7922 24.6571 15.1477 24.1272C14.5175 23.5972 13.8801 23.0673 13.2356 22.5374C12.5911 22.0074 11.9752 21.456 11.3879 20.8831C10.7864 20.3101 10.2564 19.6799 9.7981 18.9924C9.55461 18.6344 9.31828 18.219 9.08911 17.7463C8.87427 17.2594 8.70239 16.7402 8.57349 16.1887C8.44458 15.6373 8.38013 15.068 8.38013 14.4807C8.38013 13.8935 8.48039 13.3062 8.68091 12.719C8.99601 11.8023 9.54028 11.0181 10.3137 10.3665C11.0872 9.71476 12.0754 9.36743 13.2786 9.32446C14.4387 9.26717 15.3625 9.5035 16.05 10.0334C16.7375 10.5634 17.3606 11.1292 17.9192 11.7307ZM23.8489 19.1213C24.2929 18.6773 24.7262 18.151 25.1487 17.5422C25.5712 16.9335 25.8398 16.2424 25.9543 15.469C26.0546 14.5523 25.9364 13.7467 25.5999 13.052C25.2633 12.3573 24.7942 11.8453 24.1926 11.5159C23.9778 11.4156 23.6913 11.3189 23.3333 11.2258C22.9752 11.1327 22.6028 11.0862 22.2161 11.0862C21.7291 11.1292 21.2708 11.2867 20.8411 11.5588C20.4114 11.831 20.0676 12.0745 19.8098 12.2893C19.6809 12.3896 19.5413 12.5185 19.3909 12.676C19.2405 12.8336 19.0793 12.9911 18.9075 13.1487C18.7356 13.3206 18.5995 13.4924 18.4993 13.6643C18.399 13.8362 18.2056 13.9221 17.9192 13.9221C17.7043 13.9221 17.5146 13.8362 17.3499 13.6643C17.1851 13.4924 17.0455 13.3206 16.9309 13.1487C16.759 13.0055 16.5979 12.8551 16.4475 12.6975C16.2971 12.54 16.1575 12.4039 16.0286 12.2893C15.7135 12.0172 15.3554 11.7486 14.9543 11.4836C14.5533 11.2187 14.0806 11.0862 13.5364 11.0862C12.4908 11.1292 11.6529 11.4801 11.0227 12.1389C10.3925 12.7978 10.0559 13.6213 10.0129 14.6096C9.95565 15.3114 10.038 15.9452 10.26 16.511C10.482 17.0767 10.7577 17.5745 11.0872 18.0042C11.5312 18.6344 12.0468 19.2288 12.634 19.7874C13.2213 20.3316 13.8264 20.8652 14.4495 21.3879C15.0725 21.9107 15.692 22.4371 16.3079 22.967C16.9094 23.4827 17.4465 24.0341 17.9192 24.6213C18.3632 24.1344 18.8287 23.6617 19.3157 23.2034C19.8027 22.7594 20.3004 22.3153 20.8088 21.8713C21.3173 21.4273 21.8293 20.9833 22.345 20.5393C22.8463 20.0953 23.3476 19.6226 23.8489 19.1213Z"
+                                                fill="#46B1F0" />
+                                        </svg>
+                                    </a>
+                                    <a class="goods__item-details-title mb-4 text-sm text-[#333E48] max-w-[228px] block"
+                                        href="">Блок живлення
+                                        Apple
+                                        MacBook
+                                        18.5V 4.6A 85W MagSafe 1</a>
+                                    <div class="goods__item-details-mini">
+                                        <div class="goods__item-details-mini-title">Бренд: <span>Apple</span></div>
+                                        <div class="goods__item-details-mini-title">Напруга: <span>18.5V</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Сила струму: <span>18.5V</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Потужність: <span>85W</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Роз'єм: <span>MagSafe 1</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Гарантійний термін:
+                                            <span>6 місяців</span></div>
+                                    </div>
+                                    <div
+                                        class="goods__item-details-price-wrapper flex justify-between items-center xl:flex-col xl:items-start">
+                                        <div class="">
+                                            <div
+                                                class="goods__item-details-price-old text-xs font-normal text-center line-through text-[#AEAEAE]">
+                                                1,249грн
+                                            </div>
+                                            <div class="goods__item-details-price text-2xl text-[#333E48] font-bold">
+                                                749<span class="text-xs text-[#333E48] font-bold">грн</span></div>
+                                        </div>
+                                        <a class="goods__item-details-btn relative min-w-[107px] py-[10px]  px-5 rounded-[40px] bg-[#46B1F0] text-white hover:bg-[linear-gradient(90deg,#46B1F0_0%,#005BA9_100%)]  hover:shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] duration-200 flex items-center justify-center gap-2 xl:mx-auto sm:w-full sm:text-center"
+                                            href="">Купити<span
+                                                class="block content-[''] bg-[url('/images/dist/goods/buy.svg')] bg-no-repeat bg-cover w-5 h-5 "></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goods__item rounded-2xl w-full hover:shadow-xl duration-200 relative">
+                                <a class="goods__item-photo mb-4 w-full block" href="">
+                                    <img class="w-full rounded-tl-2xl rounded-tr-2xl"
+                                        src="images/dist/goods/goods-1.webp" alt="goods-1">
+                                </a>
+                                <div class="goods__item-details px-2 pb-2 relative">
+                                    <a class="goods__item-details-like absolute right-2 xl:bottom-[60px]" href="">
+                                        <svg class="group duration-200" width="36" height="36" viewBox="0 0 36 36"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect class="group-hover:fill-[#46B1F0] duration-200" width="36" height="36"
+                                                rx="18" fill="#F7F7F7" />
+                                            <path
+                                                class="group-hover:stroke-[#F6F6F6] group-hover:fill-[#F6F6F6] duration-200"
+                                                d="M17.9192 11.7307C18.3489 11.2437 18.8752 10.7675 19.4983 10.302C20.1213 9.83651 20.8411 9.53931 21.6575 9.4104C22.4023 9.31014 23.0898 9.33879 23.72 9.49634C24.3359 9.65389 24.8909 9.90454 25.385 10.2483C25.8792 10.592 26.2909 11.0146 26.6204 11.5159C26.9641 12.0028 27.2148 12.5185 27.3723 13.0627C27.5442 13.6643 27.6265 14.3375 27.6194 15.0823C27.6122 15.8271 27.5012 16.5146 27.2864 17.1448C26.9713 17.9612 26.5631 18.6988 26.0618 19.3577C25.5461 20.0165 24.9804 20.636 24.3645 21.2161C23.7486 21.7961 23.1112 22.3512 22.4524 22.8811C21.7935 23.4111 21.1562 23.9482 20.5403 24.4924C20.3971 24.6643 20.2216 24.8505 20.0139 25.051C19.8062 25.2515 19.5806 25.4377 19.3372 25.6096C19.1939 25.7528 19.0077 25.9677 18.7786 26.2542C18.5494 26.5406 18.3059 26.6838 18.0481 26.6838C17.8189 26.6838 17.6184 26.5943 17.4465 26.4153C17.2747 26.2362 17.1028 26.0393 16.9309 25.8245C16.3866 25.2229 15.7922 24.6571 15.1477 24.1272C14.5175 23.5972 13.8801 23.0673 13.2356 22.5374C12.5911 22.0074 11.9752 21.456 11.3879 20.8831C10.7864 20.3101 10.2564 19.6799 9.7981 18.9924C9.55461 18.6344 9.31828 18.219 9.08911 17.7463C8.87427 17.2594 8.70239 16.7402 8.57349 16.1887C8.44458 15.6373 8.38013 15.068 8.38013 14.4807C8.38013 13.8935 8.48039 13.3062 8.68091 12.719C8.99601 11.8023 9.54028 11.0181 10.3137 10.3665C11.0872 9.71476 12.0754 9.36743 13.2786 9.32446C14.4387 9.26717 15.3625 9.5035 16.05 10.0334C16.7375 10.5634 17.3606 11.1292 17.9192 11.7307ZM23.8489 19.1213C24.2929 18.6773 24.7262 18.151 25.1487 17.5422C25.5712 16.9335 25.8398 16.2424 25.9543 15.469C26.0546 14.5523 25.9364 13.7467 25.5999 13.052C25.2633 12.3573 24.7942 11.8453 24.1926 11.5159C23.9778 11.4156 23.6913 11.3189 23.3333 11.2258C22.9752 11.1327 22.6028 11.0862 22.2161 11.0862C21.7291 11.1292 21.2708 11.2867 20.8411 11.5588C20.4114 11.831 20.0676 12.0745 19.8098 12.2893C19.6809 12.3896 19.5413 12.5185 19.3909 12.676C19.2405 12.8336 19.0793 12.9911 18.9075 13.1487C18.7356 13.3206 18.5995 13.4924 18.4993 13.6643C18.399 13.8362 18.2056 13.9221 17.9192 13.9221C17.7043 13.9221 17.5146 13.8362 17.3499 13.6643C17.1851 13.4924 17.0455 13.3206 16.9309 13.1487C16.759 13.0055 16.5979 12.8551 16.4475 12.6975C16.2971 12.54 16.1575 12.4039 16.0286 12.2893C15.7135 12.0172 15.3554 11.7486 14.9543 11.4836C14.5533 11.2187 14.0806 11.0862 13.5364 11.0862C12.4908 11.1292 11.6529 11.4801 11.0227 12.1389C10.3925 12.7978 10.0559 13.6213 10.0129 14.6096C9.95565 15.3114 10.038 15.9452 10.26 16.511C10.482 17.0767 10.7577 17.5745 11.0872 18.0042C11.5312 18.6344 12.0468 19.2288 12.634 19.7874C13.2213 20.3316 13.8264 20.8652 14.4495 21.3879C15.0725 21.9107 15.692 22.4371 16.3079 22.967C16.9094 23.4827 17.4465 24.0341 17.9192 24.6213C18.3632 24.1344 18.8287 23.6617 19.3157 23.2034C19.8027 22.7594 20.3004 22.3153 20.8088 21.8713C21.3173 21.4273 21.8293 20.9833 22.345 20.5393C22.8463 20.0953 23.3476 19.6226 23.8489 19.1213Z"
+                                                fill="#46B1F0" />
+                                        </svg>
+                                    </a>
+                                    <a class="goods__item-details-title mb-4 text-sm text-[#333E48] max-w-[228px] block"
+                                        href="">Блок живлення
+                                        Apple
+                                        MacBook
+                                        18.5V 4.6A 85W MagSafe 1</a>
+                                    <div class="goods__item-details-mini">
+                                        <div class="goods__item-details-mini-title">Бренд: <span>Apple</span></div>
+                                        <div class="goods__item-details-mini-title">Напруга: <span>18.5V</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Сила струму: <span>18.5V</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Потужність: <span>85W</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Роз'єм: <span>MagSafe 1</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Гарантійний термін:
+                                            <span>6 місяців</span></div>
+                                    </div>
+                                    <div
+                                        class="goods__item-details-price-wrapper flex justify-between items-center xl:flex-col xl:items-start">
+                                        <div class="">
+                                            <div
+                                                class="goods__item-details-price-old text-xs font-normal text-center line-through text-[#AEAEAE]">
+                                                1,249грн
+                                            </div>
+                                            <div class="goods__item-details-price text-2xl text-[#333E48] font-bold">
+                                                749<span class="text-xs text-[#333E48] font-bold">грн</span></div>
+                                        </div>
+                                        <a class="goods__item-details-btn relative min-w-[107px] py-[10px]  px-5 rounded-[40px] bg-[#46B1F0] text-white hover:bg-[linear-gradient(90deg,#46B1F0_0%,#005BA9_100%)]  hover:shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] duration-200 flex items-center justify-center gap-2 xl:mx-auto sm:w-full sm:text-center"
+                                            href="">Купити<span
+                                                class="block content-[''] bg-[url('/images/dist/goods/buy.svg')] bg-no-repeat bg-cover w-5 h-5 "></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goods__item rounded-2xl w-full hover:shadow-xl duration-200 relative">
+                                <a class="goods__item-photo mb-4 w-full block" href="">
+                                    <img class="w-full rounded-tl-2xl rounded-tr-2xl"
+                                        src="images/dist/goods/goods-1.webp" alt="goods-1">
+                                </a>
+                                <div class="goods__item-details px-2 pb-2 relative">
+                                    <a class="goods__item-details-like absolute right-2 xl:bottom-[60px]" href="">
+                                        <svg class="group duration-200" width="36" height="36" viewBox="0 0 36 36"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect class="group-hover:fill-[#46B1F0] duration-200" width="36" height="36"
+                                                rx="18" fill="#F7F7F7" />
+                                            <path
+                                                class="group-hover:stroke-[#F6F6F6] group-hover:fill-[#F6F6F6] duration-200"
+                                                d="M17.9192 11.7307C18.3489 11.2437 18.8752 10.7675 19.4983 10.302C20.1213 9.83651 20.8411 9.53931 21.6575 9.4104C22.4023 9.31014 23.0898 9.33879 23.72 9.49634C24.3359 9.65389 24.8909 9.90454 25.385 10.2483C25.8792 10.592 26.2909 11.0146 26.6204 11.5159C26.9641 12.0028 27.2148 12.5185 27.3723 13.0627C27.5442 13.6643 27.6265 14.3375 27.6194 15.0823C27.6122 15.8271 27.5012 16.5146 27.2864 17.1448C26.9713 17.9612 26.5631 18.6988 26.0618 19.3577C25.5461 20.0165 24.9804 20.636 24.3645 21.2161C23.7486 21.7961 23.1112 22.3512 22.4524 22.8811C21.7935 23.4111 21.1562 23.9482 20.5403 24.4924C20.3971 24.6643 20.2216 24.8505 20.0139 25.051C19.8062 25.2515 19.5806 25.4377 19.3372 25.6096C19.1939 25.7528 19.0077 25.9677 18.7786 26.2542C18.5494 26.5406 18.3059 26.6838 18.0481 26.6838C17.8189 26.6838 17.6184 26.5943 17.4465 26.4153C17.2747 26.2362 17.1028 26.0393 16.9309 25.8245C16.3866 25.2229 15.7922 24.6571 15.1477 24.1272C14.5175 23.5972 13.8801 23.0673 13.2356 22.5374C12.5911 22.0074 11.9752 21.456 11.3879 20.8831C10.7864 20.3101 10.2564 19.6799 9.7981 18.9924C9.55461 18.6344 9.31828 18.219 9.08911 17.7463C8.87427 17.2594 8.70239 16.7402 8.57349 16.1887C8.44458 15.6373 8.38013 15.068 8.38013 14.4807C8.38013 13.8935 8.48039 13.3062 8.68091 12.719C8.99601 11.8023 9.54028 11.0181 10.3137 10.3665C11.0872 9.71476 12.0754 9.36743 13.2786 9.32446C14.4387 9.26717 15.3625 9.5035 16.05 10.0334C16.7375 10.5634 17.3606 11.1292 17.9192 11.7307ZM23.8489 19.1213C24.2929 18.6773 24.7262 18.151 25.1487 17.5422C25.5712 16.9335 25.8398 16.2424 25.9543 15.469C26.0546 14.5523 25.9364 13.7467 25.5999 13.052C25.2633 12.3573 24.7942 11.8453 24.1926 11.5159C23.9778 11.4156 23.6913 11.3189 23.3333 11.2258C22.9752 11.1327 22.6028 11.0862 22.2161 11.0862C21.7291 11.1292 21.2708 11.2867 20.8411 11.5588C20.4114 11.831 20.0676 12.0745 19.8098 12.2893C19.6809 12.3896 19.5413 12.5185 19.3909 12.676C19.2405 12.8336 19.0793 12.9911 18.9075 13.1487C18.7356 13.3206 18.5995 13.4924 18.4993 13.6643C18.399 13.8362 18.2056 13.9221 17.9192 13.9221C17.7043 13.9221 17.5146 13.8362 17.3499 13.6643C17.1851 13.4924 17.0455 13.3206 16.9309 13.1487C16.759 13.0055 16.5979 12.8551 16.4475 12.6975C16.2971 12.54 16.1575 12.4039 16.0286 12.2893C15.7135 12.0172 15.3554 11.7486 14.9543 11.4836C14.5533 11.2187 14.0806 11.0862 13.5364 11.0862C12.4908 11.1292 11.6529 11.4801 11.0227 12.1389C10.3925 12.7978 10.0559 13.6213 10.0129 14.6096C9.95565 15.3114 10.038 15.9452 10.26 16.511C10.482 17.0767 10.7577 17.5745 11.0872 18.0042C11.5312 18.6344 12.0468 19.2288 12.634 19.7874C13.2213 20.3316 13.8264 20.8652 14.4495 21.3879C15.0725 21.9107 15.692 22.4371 16.3079 22.967C16.9094 23.4827 17.4465 24.0341 17.9192 24.6213C18.3632 24.1344 18.8287 23.6617 19.3157 23.2034C19.8027 22.7594 20.3004 22.3153 20.8088 21.8713C21.3173 21.4273 21.8293 20.9833 22.345 20.5393C22.8463 20.0953 23.3476 19.6226 23.8489 19.1213Z"
+                                                fill="#46B1F0" />
+                                        </svg>
+                                    </a>
+                                    <a class="goods__item-details-title mb-4 text-sm text-[#333E48] max-w-[228px] block"
+                                        href="">Блок живлення
+                                        Apple
+                                        MacBook
+                                        18.5V 4.6A 85W MagSafe 1</a>
+                                    <div class="goods__item-details-mini">
+                                        <div class="goods__item-details-mini-title">Бренд: <span>Apple</span></div>
+                                        <div class="goods__item-details-mini-title">Напруга: <span>18.5V</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Сила струму: <span>18.5V</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Потужність: <span>85W</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Роз'єм: <span>MagSafe 1</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Гарантійний термін:
+                                            <span>6 місяців</span></div>
+                                    </div>
+                                    <div
+                                        class="goods__item-details-price-wrapper flex justify-between items-center xl:flex-col xl:items-start">
+                                        <div class="">
+                                            <div
+                                                class="goods__item-details-price-old text-xs font-normal text-center line-through text-[#AEAEAE]">
+                                                1,249грн
+                                            </div>
+                                            <div class="goods__item-details-price text-2xl text-[#333E48] font-bold">
+                                                749<span class="text-xs text-[#333E48] font-bold">грн</span></div>
+                                        </div>
+                                        <a class="goods__item-details-btn relative min-w-[107px] py-[10px]  px-5 rounded-[40px] bg-[#46B1F0] text-white hover:bg-[linear-gradient(90deg,#46B1F0_0%,#005BA9_100%)]  hover:shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] duration-200 flex items-center justify-center gap-2 xl:mx-auto sm:w-full sm:text-center"
+                                            href="">Купити<span
+                                                class="block content-[''] bg-[url('/images/dist/goods/buy.svg')] bg-no-repeat bg-cover w-5 h-5 "></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goods__item rounded-2xl w-full hover:shadow-xl duration-200 relative">
+                                <a class="goods__item-photo mb-4 w-full block" href="">
+                                    <img class="w-full rounded-tl-2xl rounded-tr-2xl"
+                                        src="images/dist/goods/goods-1.webp" alt="goods-1">
+                                </a>
+                                <div class="goods__item-details px-2 pb-2 relative">
+                                    <a class="goods__item-details-like absolute right-2 xl:bottom-[60px]" href="">
+                                        <svg class="group duration-200" width="36" height="36" viewBox="0 0 36 36"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect class="group-hover:fill-[#46B1F0] duration-200" width="36" height="36"
+                                                rx="18" fill="#F7F7F7" />
+                                            <path
+                                                class="group-hover:stroke-[#F6F6F6] group-hover:fill-[#F6F6F6] duration-200"
+                                                d="M17.9192 11.7307C18.3489 11.2437 18.8752 10.7675 19.4983 10.302C20.1213 9.83651 20.8411 9.53931 21.6575 9.4104C22.4023 9.31014 23.0898 9.33879 23.72 9.49634C24.3359 9.65389 24.8909 9.90454 25.385 10.2483C25.8792 10.592 26.2909 11.0146 26.6204 11.5159C26.9641 12.0028 27.2148 12.5185 27.3723 13.0627C27.5442 13.6643 27.6265 14.3375 27.6194 15.0823C27.6122 15.8271 27.5012 16.5146 27.2864 17.1448C26.9713 17.9612 26.5631 18.6988 26.0618 19.3577C25.5461 20.0165 24.9804 20.636 24.3645 21.2161C23.7486 21.7961 23.1112 22.3512 22.4524 22.8811C21.7935 23.4111 21.1562 23.9482 20.5403 24.4924C20.3971 24.6643 20.2216 24.8505 20.0139 25.051C19.8062 25.2515 19.5806 25.4377 19.3372 25.6096C19.1939 25.7528 19.0077 25.9677 18.7786 26.2542C18.5494 26.5406 18.3059 26.6838 18.0481 26.6838C17.8189 26.6838 17.6184 26.5943 17.4465 26.4153C17.2747 26.2362 17.1028 26.0393 16.9309 25.8245C16.3866 25.2229 15.7922 24.6571 15.1477 24.1272C14.5175 23.5972 13.8801 23.0673 13.2356 22.5374C12.5911 22.0074 11.9752 21.456 11.3879 20.8831C10.7864 20.3101 10.2564 19.6799 9.7981 18.9924C9.55461 18.6344 9.31828 18.219 9.08911 17.7463C8.87427 17.2594 8.70239 16.7402 8.57349 16.1887C8.44458 15.6373 8.38013 15.068 8.38013 14.4807C8.38013 13.8935 8.48039 13.3062 8.68091 12.719C8.99601 11.8023 9.54028 11.0181 10.3137 10.3665C11.0872 9.71476 12.0754 9.36743 13.2786 9.32446C14.4387 9.26717 15.3625 9.5035 16.05 10.0334C16.7375 10.5634 17.3606 11.1292 17.9192 11.7307ZM23.8489 19.1213C24.2929 18.6773 24.7262 18.151 25.1487 17.5422C25.5712 16.9335 25.8398 16.2424 25.9543 15.469C26.0546 14.5523 25.9364 13.7467 25.5999 13.052C25.2633 12.3573 24.7942 11.8453 24.1926 11.5159C23.9778 11.4156 23.6913 11.3189 23.3333 11.2258C22.9752 11.1327 22.6028 11.0862 22.2161 11.0862C21.7291 11.1292 21.2708 11.2867 20.8411 11.5588C20.4114 11.831 20.0676 12.0745 19.8098 12.2893C19.6809 12.3896 19.5413 12.5185 19.3909 12.676C19.2405 12.8336 19.0793 12.9911 18.9075 13.1487C18.7356 13.3206 18.5995 13.4924 18.4993 13.6643C18.399 13.8362 18.2056 13.9221 17.9192 13.9221C17.7043 13.9221 17.5146 13.8362 17.3499 13.6643C17.1851 13.4924 17.0455 13.3206 16.9309 13.1487C16.759 13.0055 16.5979 12.8551 16.4475 12.6975C16.2971 12.54 16.1575 12.4039 16.0286 12.2893C15.7135 12.0172 15.3554 11.7486 14.9543 11.4836C14.5533 11.2187 14.0806 11.0862 13.5364 11.0862C12.4908 11.1292 11.6529 11.4801 11.0227 12.1389C10.3925 12.7978 10.0559 13.6213 10.0129 14.6096C9.95565 15.3114 10.038 15.9452 10.26 16.511C10.482 17.0767 10.7577 17.5745 11.0872 18.0042C11.5312 18.6344 12.0468 19.2288 12.634 19.7874C13.2213 20.3316 13.8264 20.8652 14.4495 21.3879C15.0725 21.9107 15.692 22.4371 16.3079 22.967C16.9094 23.4827 17.4465 24.0341 17.9192 24.6213C18.3632 24.1344 18.8287 23.6617 19.3157 23.2034C19.8027 22.7594 20.3004 22.3153 20.8088 21.8713C21.3173 21.4273 21.8293 20.9833 22.345 20.5393C22.8463 20.0953 23.3476 19.6226 23.8489 19.1213Z"
+                                                fill="#46B1F0" />
+                                        </svg>
+                                    </a>
+                                    <a class="goods__item-details-title mb-4 text-sm text-[#333E48] max-w-[228px] block"
+                                        href="">Блок живлення
+                                        Apple
+                                        MacBook
+                                        18.5V 4.6A 85W MagSafe 1</a>
+                                    <div class="goods__item-details-mini">
+                                        <div class="goods__item-details-mini-title">Бренд: <span>Apple</span></div>
+                                        <div class="goods__item-details-mini-title">Напруга: <span>18.5V</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Сила струму: <span>18.5V</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Потужність: <span>85W</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Роз'єм: <span>MagSafe 1</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Гарантійний термін:
+                                            <span>6 місяців</span></div>
+                                    </div>
+                                    <div
+                                        class="goods__item-details-price-wrapper flex justify-between items-center xl:flex-col xl:items-start">
+                                        <div class="">
+                                            <div
+                                                class="goods__item-details-price-old text-xs font-normal text-center line-through text-[#AEAEAE]">
+                                                1,249грн
+                                            </div>
+                                            <div class="goods__item-details-price text-2xl text-[#333E48] font-bold">
+                                                749<span class="text-xs text-[#333E48] font-bold">грн</span></div>
+                                        </div>
+                                        <a class="goods__item-details-btn relative min-w-[107px] py-[10px]  px-5 rounded-[40px] bg-[#46B1F0] text-white hover:bg-[linear-gradient(90deg,#46B1F0_0%,#005BA9_100%)]  hover:shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] duration-200 flex items-center justify-center gap-2 xl:mx-auto sm:w-full sm:text-center"
+                                            href="">Купити<span
+                                                class="block content-[''] bg-[url('/images/dist/goods/buy.svg')] bg-no-repeat bg-cover w-5 h-5 "></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goods__item rounded-2xl w-full hover:shadow-xl duration-200 relative">
+                                <a class="goods__item-photo mb-4 w-full block" href="">
+                                    <img class="w-full rounded-tl-2xl rounded-tr-2xl"
+                                        src="images/dist/goods/goods-1.webp" alt="goods-1">
+                                </a>
+                                <div class="goods__item-details px-2 pb-2 relative">
+                                    <a class="goods__item-details-like absolute right-2 xl:bottom-[60px]" href="">
+                                        <svg class="group duration-200" width="36" height="36" viewBox="0 0 36 36"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect class="group-hover:fill-[#46B1F0] duration-200" width="36" height="36"
+                                                rx="18" fill="#F7F7F7" />
+                                            <path
+                                                class="group-hover:stroke-[#F6F6F6] group-hover:fill-[#F6F6F6] duration-200"
+                                                d="M17.9192 11.7307C18.3489 11.2437 18.8752 10.7675 19.4983 10.302C20.1213 9.83651 20.8411 9.53931 21.6575 9.4104C22.4023 9.31014 23.0898 9.33879 23.72 9.49634C24.3359 9.65389 24.8909 9.90454 25.385 10.2483C25.8792 10.592 26.2909 11.0146 26.6204 11.5159C26.9641 12.0028 27.2148 12.5185 27.3723 13.0627C27.5442 13.6643 27.6265 14.3375 27.6194 15.0823C27.6122 15.8271 27.5012 16.5146 27.2864 17.1448C26.9713 17.9612 26.5631 18.6988 26.0618 19.3577C25.5461 20.0165 24.9804 20.636 24.3645 21.2161C23.7486 21.7961 23.1112 22.3512 22.4524 22.8811C21.7935 23.4111 21.1562 23.9482 20.5403 24.4924C20.3971 24.6643 20.2216 24.8505 20.0139 25.051C19.8062 25.2515 19.5806 25.4377 19.3372 25.6096C19.1939 25.7528 19.0077 25.9677 18.7786 26.2542C18.5494 26.5406 18.3059 26.6838 18.0481 26.6838C17.8189 26.6838 17.6184 26.5943 17.4465 26.4153C17.2747 26.2362 17.1028 26.0393 16.9309 25.8245C16.3866 25.2229 15.7922 24.6571 15.1477 24.1272C14.5175 23.5972 13.8801 23.0673 13.2356 22.5374C12.5911 22.0074 11.9752 21.456 11.3879 20.8831C10.7864 20.3101 10.2564 19.6799 9.7981 18.9924C9.55461 18.6344 9.31828 18.219 9.08911 17.7463C8.87427 17.2594 8.70239 16.7402 8.57349 16.1887C8.44458 15.6373 8.38013 15.068 8.38013 14.4807C8.38013 13.8935 8.48039 13.3062 8.68091 12.719C8.99601 11.8023 9.54028 11.0181 10.3137 10.3665C11.0872 9.71476 12.0754 9.36743 13.2786 9.32446C14.4387 9.26717 15.3625 9.5035 16.05 10.0334C16.7375 10.5634 17.3606 11.1292 17.9192 11.7307ZM23.8489 19.1213C24.2929 18.6773 24.7262 18.151 25.1487 17.5422C25.5712 16.9335 25.8398 16.2424 25.9543 15.469C26.0546 14.5523 25.9364 13.7467 25.5999 13.052C25.2633 12.3573 24.7942 11.8453 24.1926 11.5159C23.9778 11.4156 23.6913 11.3189 23.3333 11.2258C22.9752 11.1327 22.6028 11.0862 22.2161 11.0862C21.7291 11.1292 21.2708 11.2867 20.8411 11.5588C20.4114 11.831 20.0676 12.0745 19.8098 12.2893C19.6809 12.3896 19.5413 12.5185 19.3909 12.676C19.2405 12.8336 19.0793 12.9911 18.9075 13.1487C18.7356 13.3206 18.5995 13.4924 18.4993 13.6643C18.399 13.8362 18.2056 13.9221 17.9192 13.9221C17.7043 13.9221 17.5146 13.8362 17.3499 13.6643C17.1851 13.4924 17.0455 13.3206 16.9309 13.1487C16.759 13.0055 16.5979 12.8551 16.4475 12.6975C16.2971 12.54 16.1575 12.4039 16.0286 12.2893C15.7135 12.0172 15.3554 11.7486 14.9543 11.4836C14.5533 11.2187 14.0806 11.0862 13.5364 11.0862C12.4908 11.1292 11.6529 11.4801 11.0227 12.1389C10.3925 12.7978 10.0559 13.6213 10.0129 14.6096C9.95565 15.3114 10.038 15.9452 10.26 16.511C10.482 17.0767 10.7577 17.5745 11.0872 18.0042C11.5312 18.6344 12.0468 19.2288 12.634 19.7874C13.2213 20.3316 13.8264 20.8652 14.4495 21.3879C15.0725 21.9107 15.692 22.4371 16.3079 22.967C16.9094 23.4827 17.4465 24.0341 17.9192 24.6213C18.3632 24.1344 18.8287 23.6617 19.3157 23.2034C19.8027 22.7594 20.3004 22.3153 20.8088 21.8713C21.3173 21.4273 21.8293 20.9833 22.345 20.5393C22.8463 20.0953 23.3476 19.6226 23.8489 19.1213Z"
+                                                fill="#46B1F0" />
+                                        </svg>
+                                    </a>
+                                    <a class="goods__item-details-title mb-4 text-sm text-[#333E48] max-w-[228px] block"
+                                        href="">Блок живлення
+                                        Apple
+                                        MacBook
+                                        18.5V 4.6A 85W MagSafe 1</a>
+                                    <div class="goods__item-details-mini">
+                                        <div class="goods__item-details-mini-title">Бренд: <span>Apple</span></div>
+                                        <div class="goods__item-details-mini-title">Напруга: <span>18.5V</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Сила струму: <span>18.5V</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Потужність: <span>85W</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Роз'єм: <span>MagSafe 1</span>
+                                        </div>
+                                        <div class="goods__item-details-mini-title">Гарантійний термін:
+                                            <span>6 місяців</span></div>
+                                    </div>
+                                    <div
+                                        class="goods__item-details-price-wrapper flex justify-between items-center xl:flex-col xl:items-start">
+                                        <div class="">
+                                            <div
+                                                class="goods__item-details-price-old text-xs font-normal text-center line-through text-[#AEAEAE]">
+                                                1,249грн
+                                            </div>
+                                            <div class="goods__item-details-price text-2xl text-[#333E48] font-bold">
+                                                749<span class="text-xs text-[#333E48] font-bold">грн</span></div>
+                                        </div>
+                                        <a class="goods__item-details-btn relative min-w-[107px] py-[10px]  px-5 rounded-[40px] bg-[#46B1F0] text-white hover:bg-[linear-gradient(90deg,#46B1F0_0%,#005BA9_100%)]  hover:shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] duration-200 flex items-center justify-center gap-2 xl:mx-auto sm:w-full sm:text-center"
+                                            href="">Купити<span
+                                                class="block content-[''] bg-[url('/images/dist/goods/buy.svg')] bg-no-repeat bg-cover w-5 h-5 "></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-end gap-5 mt-12 sm:justify-center">
+                        <a class="text-base font-medium text-[#333E48]" href="">1</a>
+                        <a class="text-base font-medium text-[#333E48]" href="">2</a>
+                        <a class="text-base font-medium text-[#333E48]" href="">...</a>
+                        <a class="-ml-2" href="">
+                            <img src="images/dist/goods/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="section py-[104px] sm:py-8">
+                <div class="container">
+                    <div class="flex justify-center items-center">
+                        <div class="sm:scale-150">
+                            <img src="images/dist/brands/brand-1.webp" alt="brand-1">
+                        </div>
+                        <div class="sm:scale-150">
+                            <img src="images/dist/brands/brand-2.webp" alt="brand-2">
+                        </div>
+                        <div class="sm:scale-150">
+                            <img src="images/dist/brands/brand-3.webp" alt="brand-3">
+                        </div>
+                        <div class="sm:scale-150">
+                            <img src="images/dist/brands/brand-4.webp" alt="brand-4">
+                        </div>
+                        <div class="sm:scale-150">
+                            <img src="images/dist/brands/brand-5.webp" alt="brand-5">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="flex flex-col gap-y-2 fixed z-20 right-2 bottom-20 sm:bottom-[134px]">
+                <button
+                    class="btn__top p-[10px] rounded-full bg-[#46B1F0] cursor-pointer border-none w-10 h-10 hover:bg-[linear-gradient(90deg,#46B1F0_0%,#005BA9_100%)]  hover:shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] duration-200">
+                    <img class="mx-auto" src="images/dist/arrow-top.svg" alt="arrow-top">
+                </button>
+                <button
+                    class="modal_btn p-[10px] rounded-full bg-[#46B1F0] cursor-pointer border-none w-10 h-10 hover:bg-[linear-gradient(90deg,#46B1F0_0%,#005BA9_100%)]  hover:shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] duration-200">
+                    <img class="mx-auto" src="images/dist/message.svg" alt="message">
+                </button>
+            </div>
+            <!--=include modal.html -->
+            <!--=include modal-thank.html -->
+            <!--=include modal-cabinet.html -->
+            <!--=include modal-sign.html -->
+            <!--=include modal-error.html -->
+            <!--=include modal-login.html -->
+            <!--=include modal-reset.html -->
+            <!--=include modal-succes.html -->
+            <!--=include modal-succes-2.html -->
+            <!--=include modal-succes-3.html -->
+            <!--=include modal-basket.html -->
+            <!--=include modal-basket.html -->
+            <!--=include modal-choose.html -->
+        </main>
+        <!--=include footer.html -->
+    </div>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

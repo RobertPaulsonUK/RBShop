@@ -1,0 +1,392 @@
+html,
+body {
+    font-family: 'Jost', sans-serif;
+    scroll-behavior: smooth;
+    background: #F6F6F6;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.sorting_col.active {
+    path {
+        fill: #46B1F0
+    }
+}
+
+.sorting_row.active {
+
+    rect {
+        fill: #46B1F0
+    }
+}
+
+.goods__item-details-mini {
+    display: none;
+}
+
+.goods__items.active {
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+
+    .goods__item {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+    }
+
+    .goods__item-new {
+        left: 0;
+        right: auto;
+        border-radius: 0;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .goods__item-photo {
+        width: 232px;
+    }
+
+    .goods__item-details {
+        position: relative;
+        width: 100%;
+        min-height: 150px;
+        padding-left: 0;
+    }
+
+    .goods__item-details-mini {
+        display: block;
+    }
+
+    .goods__item-details-mini-title {
+        margin-bottom: 5px;
+        color: var(--light-grey, #AEAEAE);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        span {
+            color: var(--text, #333E48);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+        }
+    }
+
+    .goods__item-details-title {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .goods__item-details-price-wrapper {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .goods__item-details-like {
+        right: 20px;
+    }
+}
+
+.sidebar.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header__search.active {
+    width: 85%;
+}
+
+.search__inpt.active {
+    padding-left: 20px;
+    width: 100%;
+}
+
+.header__pannel.active {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+}
+
+.pannel__close.active {
+    position: absolute;
+    right: 16px;
+    display: block;
+    z-index: 100;
+
+    img {
+        pointer-events: none;
+    }
+}
+
+.lang__link.active {
+    color: #46B1F0;
+}
+
+.header__menu {
+    height: 352px;
+    transition: height 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.header__menu.active {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.header__nav.active {
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+}
+
+.intro__wrapper.active {
+    margin-left: 0;
+}
+
+.modal_sign.active {
+    background: #46B1F0;
+}
+
+.modal_login.active {
+    background: #AEAEAE;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__thank.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__cabinet {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+.swiper-button-disabled {
+    display: none;
+}
+
+.swiper-pagination-bullet {
+    margin: 0 2px !important;
+    width: 24px;
+    height: 6px;
+    background: #AEAEAE;
+    opacity: 1;
+    border-radius: 4px;
+}
+
+.swiper-pagination-bullet-active {
+    width: 40px;
+    height: 6px;
+    background: #F6F6F6;
+    border-radius: 4px;
+}
+
+
+
+
+
+.good__slider {
+    width: 100%;
+    height: 100%;
+}
+
+.good__slider-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+.mySwiper2 {
+    margin-bottom: 22px;
+    height: 80%;
+    width: 100%;
+    border-radius: 48px;
+    overflow: hidden;
+}
+
+.mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+
+    .good__slider-slide {
+        width: 25%;
+        height: 100%;
+        opacity: 0.4;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+    img {
+        border-radius: 6px;
+    }
+
+    .swiper-slide-thumb-active {
+        opacity: 1;
+    }
+}
+
+.btn_tab.active {
+    background-color: #46B1F0;
+    color: #fff;
+}
+
+
+.tab_item.active {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+.btn_tab_mod.active {
+    background-color: #46B1F0;
+    color: #fff;
+}
+
+
+.tab_item_mod.active {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+
+
+.range-slider {
+    position: relative;
+    width: 200px;
+    height: 2px;
+    border-radius: 15px;
+    background-color: #AEAEAE;
+}
+
+
+
+.range-slider input[type="range"] {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    -webkit-appearance: none;
+    pointer-events: none;
+    background: none;
+    outline: none;
+    position: absolute;
+    top: -4px;
+}
+
+.range-slider .range-min::-webkit-slider-thumb {
+    pointer-events: auto;
+    -webkit-appearance: none;
+    width: 8px;
+    height: 8px;
+
+    background-color: #46B1F0;
+    border-radius: 20px;
+    opacity: 1;
+}
+
+
+.range-slider .range-max::-webkit-slider-thumb {
+    pointer-events: auto;
+    -webkit-appearance: none;
+    width: 8px;
+    height: 8px;
+    background-color: #46B1F0;
+    border-radius: 20px;
+    opacity: 1;
+}
+
+.search_list.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+.cabinet_btn.active {
+    border-top: 1px solid #46B1F0;
+    border-bottom: 1px solid #46B1F0;
+
+    button {
+        color: #46B1F0;
+    }
+
+    svg {
+        path {
+            fill: #46B1F0
+        }
+    }
+}
+
+.cabinet__item {
+    display: none;
+}
+
+.cabinet__item.active {
+    display: block;
+}
+
+.cabinet__list.active {
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.cabinet_mob_btn {
+
+    svg {
+        transition: .2s all;
+    }
+}
+
+.cabinet_mob_btn.active {
+    svg {
+        transform: rotate(90deg);
+        transition: .2s all;
+    }
+}

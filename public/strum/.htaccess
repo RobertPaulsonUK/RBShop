@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^$ /app [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /dist/$1 [L]

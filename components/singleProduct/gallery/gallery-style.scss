@@ -1,0 +1,24 @@
+.product-slider-wrapper {
+  display: flex;
+  transition: transform .3s ease-in-out;
+}
+.gallery-thumbnails {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.good__slider-slide {
+  min-width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+.gallery-thumbnails-slide {
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.4;
+  transition: opacity .3s ease-in-out;
+}
+.gallery-thumbnails-slide.active {
+  opacity: 1;
+}

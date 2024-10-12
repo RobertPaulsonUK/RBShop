@@ -1,0 +1,37 @@
+.home-slider-wrapper {
+  transition: transform .3s ease-in-out;
+}
+.home-slide {
+  min-width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+.disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+.slider-pagination  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  width: 100%;
+  bottom: 8px;
+  span {
+    margin: 0 2px !important;
+    width: 24px;
+    height: 6px;
+    background: #AEAEAE;
+    opacity: 1;
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+  }
+  .active-bullet {
+    width: 40px;
+    height: 6px;
+    background: #f6f6f6;
+    border-radius: 4px;
+  }
+}

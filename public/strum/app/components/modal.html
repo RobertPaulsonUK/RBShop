@@ -1,0 +1,30 @@
+<!-- MODAL -->
+<div
+    class="modal fixed top-0 left-0 right-0 bottom-0 w-full h-full opacity-0 invisible z-50 bg-[hsla(0,0%,0%,0.443)] duration-200">
+    <div class="max-w-[660px] mx-auto mt-8 lg:max-w-[95%]">
+        <div class="bg-[#F6F6F6] p-6 rounded-3xl relative sm:p-4">
+            <img class="modal__close absolute top-6 right-6 w-10 h-10 cursor-pointer sm:w-[34px] sm:h-[34px]"
+                src="images/dist/close.svg" alt="close">
+            <div class="text-[#46B1F0] text-[32px] leading-9 font-medium mb-9 sm:mb-2">Зв’яжіться з нами</div>
+            <form action="">
+                <label class="text-[#46B1F0] text-lg font-medium mb-2 block" for="">ПІБ</label>
+                <div class="flex justify-center items-center gap-[13px] mb-9 sm:flex-col sm:mb-2">
+                    <input class="p-[10px] rounded-3xl w-full bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0]
+                    focus:text-black shadow_mod" placeholder="Ім’я" type="text">
+                    <input class="p-[10px] rounded-3xl w-full bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0]
+                    focus:text-black shadow_mod" placeholder="Прізвище" type="text">
+                </div>
+                <label class="text-[#46B1F0] text-lg font-medium mb-2 block" for="">Email</label>
+                <input class="p-[10px] mb-9 rounded-3xl w-full bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0]
+                    focus:text-black shadow_mod sm:mb-2" placeholder="Введіть адресу електронної пошти" type="mail">
+                <label class="text-[#46B1F0] text-lg font-medium mb-2 block" for="">Коментар або
+                    повідомлення</label>
+                <textarea class="p-[10px] mb-9 rounded-3xl w-full min-h-[133px] bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0]
+                focus:text-black shadow_mod resize-none sm:mb-2" name="text" id=""
+                    placeholder="Ваше повідомлення"></textarea>
+                <button
+                    class="modal_btn_thank mx-auto py-[10px] px-5 block rounded-[40px] bg-[#46B1F0] border-none cursor-pointer text-[#F6F6F6] text-sm font-medium hover:bg-[linear-gradient(90deg,#46B1F0_0%,#005BA9_100%)]  hover:shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] duration-200 sm:w-full">Надіслати</button>
+            </form>
+        </div>
+    </div>
+</div>
