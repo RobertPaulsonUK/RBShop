@@ -7,6 +7,7 @@ import UpdateUserPassword from "@/utils/data/resetPassword/updateUserPasswordDat
 import ExpiredModal from "@/components/modals/general/expiredModal";
 import {useRouter} from "next/navigation";
 import {Simulate} from "react-dom/test-utils";
+import {useTranslations} from "next-intl";
 
 interface Props {
     login : string
@@ -21,6 +22,7 @@ const ResetPasswordForm:FC<Props> = ({login,resetKey}) => {
     const [isSending,setIsSending] = useState<boolean>(false)
     const [message,setMessage] = useState<null | string>(null)
     const router = useRouter()
+    const t = useTranslations('ResetPasswordPage')
     useEffect(() => {
         reset({
             password : '',
@@ -46,15 +48,15 @@ const ResetPasswordForm:FC<Props> = ({login,resetKey}) => {
         <>
             <form onSubmit={handleSubmit(onFormSubmit)} className={"max-w-[400px] w-full"}>
                 <label className="text-[#46B1F0] text-lg font-medium mb-2 block" htmlFor="resetPassword">
-                    Введіть пароль
+                    {t('FirstPasswordLabel')}
                 </label>
                 <input className={"p-[10px] mb-6 rounded-3xl w-full bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0] focus:text-black shadow_mod"}
                        id={"resetPassword"}
-                       placeholder={"Введіть пароль"}
+                       placeholder={t('FirstPasswordPlaceholder')}
                        type={"password"}
                        {...register(
                            'password',{
-                               required : 'Пароль має містити не менше 6 символів',
+                               required : t('FirstPasswordError'),
                                minLength : 6
                            }
                        )}
@@ -63,15 +65,15 @@ const ResetPasswordForm:FC<Props> = ({login,resetKey}) => {
                     <InputError text={errors.password.message}/>
                 )}
                 <label className="text-[#46B1F0] text-lg font-medium mb-2 block" htmlFor="resetRepeatPassword">
-                    Повторіть пароль
+                    {t('SecondPasswordLabel')}
                 </label>
                 <input className={"p-[10px] mb-6 rounded-3xl w-full bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0] focus:text-black shadow_mod"}
                        id={"resetRepeatPassword"}
-                       placeholder={"Введіть пароль"}
+                       placeholder={t('SecondPasswordPlaceholder')}
                        type={"password"}
                        {...register(
                            'repeatPassword',{
-                               required : 'Повторіть пароль',
+                               required : t('SecondPasswordError'),
                                validate: value => value === watch('password') || 'Паролі повинні бути однакові'
                            },
 

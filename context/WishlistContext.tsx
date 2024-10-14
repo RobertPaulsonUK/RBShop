@@ -15,10 +15,11 @@ interface IWishlistContext {
     removeFromWishlist : (id : number) => void
     count : number
     checkIsInWishlist : (id : number) => void
+    locale : string
 }
 export const WishlistContext = createContext<IWishlistContext | undefined>(undefined)
 
-export const WishlistProvider:FC<{ children: ReactNode }> = ({children}) => {
+export const WishlistProvider:FC<{ children: ReactNode ,locale: string}> = ({children,locale}) => {
     const {isLogged} = useUser()
     const [items,setItems] = useState([])
     const [count,setCount] = useState(0)
@@ -31,7 +32,7 @@ export const WishlistProvider:FC<{ children: ReactNode }> = ({children}) => {
         updateArrayIds()
     }, [items]);
     const addToWishlist = async (id : number) => {
-        const data = await AddToWishlistItem(id)
+        const data = await AddToWishlistItem(id,locale)
         if(data) {
             updateData(data)
             wishlistHandler()
@@ -39,7 +40,7 @@ export const WishlistProvider:FC<{ children: ReactNode }> = ({children}) => {
 
     }
     const removeFromWishlist = async (id : number) => {
-        const data = await RemoveFromWishlist(id)
+        const data = await RemoveFromWishlist(id,locale)
         if(data) {
             updateData(data)
         }
@@ -49,7 +50,7 @@ export const WishlistProvider:FC<{ children: ReactNode }> = ({children}) => {
             updateData([])
             return
         }
-        const data = await getWishlist()
+        const data = await getWishlist(locale)
         if(data) {
             updateData(data)
         }
@@ -78,7 +79,8 @@ export const WishlistProvider:FC<{ children: ReactNode }> = ({children}) => {
                 addToWishlist,
                 removeFromWishlist,
                 count,
-                checkIsInWishlist
+                checkIsInWishlist,
+                locale
         }}>
             {children}
         </WishlistContext.Provider>

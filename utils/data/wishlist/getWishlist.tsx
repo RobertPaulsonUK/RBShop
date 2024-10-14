@@ -2,7 +2,7 @@ import { WISHLIST_ENDPOINT} from "@/utils/constants/endpoints";
 import Cookies from 'js-cookie';
 import {AUTH_TOKEN_NAME} from "@/utils/constants/constants";
 
-async function GetWishlist(){
+async function GetWishlist(locale : string){
     const token = Cookies.get(AUTH_TOKEN_NAME)
 
 
@@ -16,7 +16,7 @@ async function GetWishlist(){
 
 
     try {
-        const response = await fetch(WISHLIST_ENDPOINT, {
+        const response = await fetch(`${WISHLIST_ENDPOINT}?lang=${locale}`, {
             method: 'GET',
             headers: {
                 ...headers,

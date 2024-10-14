@@ -1,7 +1,7 @@
 "use client"
 import {FC, useState} from "react";
 
-const LogoutButton:FC<{clickHandler : () => void}> = ({clickHandler}) => {
+const LogoutButton:FC<{clickHandler : () => void,text : string}> = ({clickHandler,text}) => {
     return(
         <>
             <li
@@ -9,8 +9,9 @@ const LogoutButton:FC<{clickHandler : () => void}> = ({clickHandler}) => {
                 onClick={clickHandler}
             >
                 <button
-                    className="text-base text-[#AEAEAE] duration-200 group-hover:text-[#46B1F0] md:order-1 md:text-right">Вийти
-                    з профілю</button>
+                    className="text-base text-[#AEAEAE] duration-200 group-hover:text-[#46B1F0] md:order-1 md:text-right">
+                    {text}
+                </button>
                 <svg className="min-w-[22px] h-[22px] md:rotate-180 sm:rotate-0"
                      viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path className="group-hover:fill-[#47B1F0] duration-200 md:fill-[#47B1F0]"

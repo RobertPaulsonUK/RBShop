@@ -14,7 +14,7 @@ const FilterForm:FC<IInterface> = ({attributes,prices,searchParams}) => {
         <>
             <form method={"GET"}>
                 {prices && <FilterPrices prices={prices} searchParams={searchParams}/>}
-                {attributes.length > 0 && attributes.map(
+                {(attributes && attributes.length > 0) && attributes.map(
                     (attr) => (
                         <FilterAttribute key={attr.slug} attribute={attr} searchParams={searchParams}/>
                     )

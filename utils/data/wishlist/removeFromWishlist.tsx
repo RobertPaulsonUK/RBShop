@@ -2,7 +2,7 @@ import { WISHLIST_ENDPOINT} from "@/utils/constants/endpoints";
 import Cookies from 'js-cookie';
 import {AUTH_TOKEN_NAME} from "@/utils/constants/constants";
 
-async function RemoveItemFromWishlist(id : number){
+async function RemoveItemFromWishlist(id : number,locale : string){
     const token = Cookies.get(AUTH_TOKEN_NAME)
     const headers = {};
     if (token) {
@@ -14,7 +14,7 @@ async function RemoveItemFromWishlist(id : number){
 
 
     try {
-        const response = await fetch(`${WISHLIST_ENDPOINT}remove/${id}`, {
+        const response = await fetch(`${WISHLIST_ENDPOINT}remove/${id}?lang=${locale}`, {
             method: 'DELETE',
             headers: {
                 ...headers,

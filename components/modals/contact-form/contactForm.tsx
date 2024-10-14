@@ -8,6 +8,7 @@ import InputSecondName from "@/components/modals/contact-form/form-parts/inputSe
 import TextAreaMessage from "@/components/modals/contact-form/form-parts/textAreaMessage";
 import ExpiredModal from "@/components/modals/general/expiredModal";
 import SendContactFormData from "@/utils/data/contact-form/contactFormSendData";
+import {useTranslations} from "next-intl";
 
 export interface ContactFormData {
     name : string
@@ -29,11 +30,14 @@ const ContactForm:FC<{closeHandler : () => void}> = ({closeHandler}) => {
             setMessage(result.message)
         }
     }
+    const t = useTranslations('ContactsForm')
 
     return(
         <>
             <form onSubmit={handleSubmit(onFormSubmit)}>
-                <label className="text-[#46B1F0] text-lg font-medium mb-2 block">ПІБ</label>
+                <label className="text-[#46B1F0] text-lg font-medium mb-2 block">
+                    {t('NameTitle')}
+                </label>
                 <div className="flex justify-center items-center gap-[13px] mb-9 sm:flex-col sm:mb-2">
                     <InputName register={register} errors={errors} inputId={"modal-contact-name"}/>
                     <InputSecondName register={register} errors={errors} inputId={'modal-contact-secondname'}/>
@@ -41,18 +45,18 @@ const ContactForm:FC<{closeHandler : () => void}> = ({closeHandler}) => {
                 <div className={"mb-9 sm:mb-2"}>
                     <label className="text-[#46B1F0] text-lg font-medium mb-2 block"
                            htmlFor={'modal-contact-email'}>
-                        Email
+                        {t('EmailTitle')}
                     </label>
                     <InputEmail register={register} errors={errors} inputId={"modal-contact-email"}/>
                 </div>
                 <label className="text-[#46B1F0] text-lg font-medium mb-2 block" htmlFor="modal-contact-text">
-                    Коментар або повідомлення
+                    {t('TextAreaTitle')}
                 </label>
                 <TextAreaMessage register={register} inputId={'modal-contact-text'}/>
                 <AnimatedTextButton isInProcess={isSending}
                                     isDisabled={!!errors.name || !!errors.secondName || !!errors.email}
-                                    regularText={'Надіслати'}
-                                    activeText={'Надсилаємо'}/>
+                                    regularText={t('FormStaticButtonText')}
+                                    activeText={t('FormActiveButtonText')}/>
             </form>
             {message && <ExpiredModal message={message} clickHandler={closeHandler}/>}
         </>

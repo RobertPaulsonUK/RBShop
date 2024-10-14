@@ -16,11 +16,10 @@ const Wishlist:FC = () => {
     const setActiveWishlist = () => {
         isLogged && count > 0 ? setIsActive(true) : setIsActive(false)
     }
-
     return(
         <>
             <Link
-                className={"relative"} href={"/wishlist"}>
+                className={"relative"} href={"/cabinet?active=3"}>
                 {isActive && <ActiveQty qty={count}/>}
                 <WishlistIcon isActive={isActive}/>
             </Link>

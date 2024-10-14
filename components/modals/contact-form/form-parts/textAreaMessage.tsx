@@ -7,6 +7,7 @@ interface Props {
     inputId : string
 }
 const TextAreaMessage:FC<Props> = ({register,inputId}) => {
+
     return(
         <>
             <textarea

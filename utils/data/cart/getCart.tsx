@@ -1,13 +1,14 @@
 import {CART_ENDPOINT} from "@/utils/constants/endpoints";
 
 interface IRequestData {
+    locale : string
     token? : string
     cartKey? : string
 }
 
 async function GetCart(requestData: IRequestData){
     const {token,cartKey} = requestData
-    let url = CART_ENDPOINT
+    let url = `${CART_ENDPOINT}?lang=${requestData.locale}`
     const headers = {};
     if (token) {
         headers['Authorization'] = `Bearer ${token}`;

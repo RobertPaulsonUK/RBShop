@@ -2,15 +2,14 @@ import {FC} from "react";
 import ToShopButton from "@/components/cart/buttons/toShopButton";
 import {useTranslations} from "next-intl";
 
-const WishlistEmpty:FC = () => {
-    const t = useTranslations('EmptyMessages')
+const LoadingCart:FC = () => {
+    const t = useTranslations('Cart')
     return(
-        <div className={"w-full flex flex-col items-center justify-center"}>
+        <div className={"min-h-[50vh]"}>
             <div className={"text-[#333E48] text-lg mb-10 sm:text-center sm:mb-6"}>
-                {t('EmptyWishlist')}
+                <p>{t('LoadingText')}</p>
             </div>
-            <ToShopButton/>
         </div>
     )
 }
-export default WishlistEmpty
+export default LoadingCart

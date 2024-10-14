@@ -1,11 +1,13 @@
 "use client"
 import {FC} from "react";
 import Image from "next/image";
+import {useTranslations} from "next-intl";
 
 interface IInterface {
     toggleMenu : () => void
 }
 const MenuButton:FC<IInterface> = ({toggleMenu}) => {
+    const t = useTranslations('Header');
     return(
         <>
             <button
@@ -19,7 +21,9 @@ const MenuButton:FC<IInterface> = ({toggleMenu}) => {
                     width={25}
                     height={25}
                 />
-                <div className="text-lg font-medium text-[#F6F6F6] md:hidden">Каталог товарів</div>
+                <div className="text-lg font-medium text-[#F6F6F6] md:hidden">
+                    {t('CategoryMenuTitle')}
+                </div>
             </button>
         </>
     )

@@ -1,10 +1,11 @@
 import { GET_PRIVACY_POLICY_DATA_ENDPOINT} from "@/utils/constants/endpoints";
 import {IPageSimpleInterface} from "@/types/page.simple.interface";
 
-async  function GetPrivacyPolicyPageData () :Promise<IPageSimpleInterface | null>
+
+async  function GetPrivacyPolicyPageData (locale : string) :Promise<IPageSimpleInterface | null>
 {
     try {
-        const response = await fetch(GET_PRIVACY_POLICY_DATA_ENDPOINT, {
+        const response = await fetch(`${GET_PRIVACY_POLICY_DATA_ENDPOINT}?lang=${locale}`, {
             method: 'GET',
         });
         if (!response.ok) {

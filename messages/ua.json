@@ -1,0 +1,160 @@
+{
+  "HomePage": {
+    "PopularProductsTitle": "Хіти продажу"
+  },
+  "Header": {
+    "SearchPlaceholder" : "Пошук товарів",
+    "CategoryMenuTitle" : "Каталог товарів"
+  },
+  "Product": {
+    "NewArrival" : "Новинка",
+    "SpecialProposeTitle" : "Спеціальна пропозиція",
+    "Discount" : "Знижка",
+    "BuyStaticText" : "Купити",
+    "BuyActiveText" : "Додаємо",
+    "VariableChooseText" : "Обрати",
+    "AttributesTitle" : "Основні характеристики:",
+    "RelatedTitle" : "Схожі товари:"
+  },
+  "ProductTabs" : {
+    "FirstTab" : "Характеристики",
+    "SecondTab" : "Опис товару"
+  },
+  "EmptyMessages": {
+    "Variations" : "Наразі такий товар відсутній",
+    "EmptyCart" : "У Вашому кошику порожньо",
+    "EmptyWishlist" : "Ваш список бажань порожній",
+    "EmptyActiveOrders" : "Наразі у вас немає активних замовлень",
+    "EmptyFinishedOrders" : "Наразі у вас немає виконаних замовлень",
+    "EmptyProducts" : "Наразі дані товари відсутні"
+  },
+  "Cabinet" : {
+    "Title" : "Особистий кабінет",
+    "AsideTogglerActions" : "Дії в профілі",
+    "DetailsTitle" : "Профіль",
+    "OrderStatus" : "Статус",
+    "OrderTTN" : "ТТН"
+  },
+  "Wishlist" : {
+    "Message" : "Товар додано в обране",
+    "Propose" : "Ви можете переглянути список обраних товарів в особистому кабінеті.",
+    "ButtonText" : "Переглянути обране"
+  },
+  "Logout" : {
+    "Title" : "Вийти з профілю?",
+    "LogoutButtonText" : "Вихід",
+    "ContinueButtonText" : "Залишитись"
+  },
+  "EditProfile" : {
+    "Title" : "Редагування профілю",
+    "NameLabel" : "ПІБ",
+    "NamePlaceholder" : "Ім’я",
+    "SecondNamePlaceholder" : "Прізвище",
+    "AddressLabel" : "Адреса",
+    "AddressOnePlaceholder" : "Місто",
+    "AddressTwoPlaceholder" : "Вул., буд., кв.",
+    "NiceNameLabel" : "Нікнейм",
+    "NiceNamePlaceholder" : "Введіть Нікнейм користувача",
+    "EmailLabel" : "Email",
+    "EmailPlaceholder" : "Введіть адресу електронної пошти",
+    "EmailError" : "Введіть адресу електронної пошти",
+    "EmailPatternError" : "Введіть правильну пошту",
+    "PhoneLabel" : "Телефон",
+    "PhonePlaceholder" : "+380",
+    "PhoneError" : "Введіть номер телефону",
+    "PhonePatternError" : "Введіть правильний номер телефону (+380)",
+    "PhoneValidateError" : "Допускаються лише цифри",
+    "ButtonStaticText" : "Зберегти зміни",
+    "ButtonActiveText" : "Оновлюємо"
+  },
+  "CabinetTabs" : {
+    "ActiveOrders" : "Поточні замовлення",
+    "FinishedOrders" : "Історія замовлень",
+    "EditProfile" : "Редагувати профіль",
+    "Wishlist" : "Обране",
+    "ExitFromProfile" : "Вийти з профілю"
+  },
+  "ContactsForm": {
+    "ModalTitle" : "Зв’яжіться з нами",
+    "DetailsTitle" : "Графік роботи:",
+    "FormStaticButtonText": "Надіслати",
+    "FormActiveButtonText": "Надсилаємо",
+    "TextAreaPlaceholder": "Ваше повідомлення",
+    "TextAreaTitle": "Коментар або повідомлення",
+    "NameTitle" : "ПІБ",
+    "NamePlaceholder" : "Ім’я",
+    "SecondNamePlaceholder" : "Прізвище",
+    "EmailPlaceholder" : "Введіть адресу електронної пошти",
+    "EmailTitle" : "Email"
+  },
+  "FormErrors" : {
+    "InputNameError" : "Введіть імʼя",
+    "InputSecondNameError" : "Введіть прізвище",
+    "InputEmailErrorRequired" : "Введіть адресу електронної пошти",
+    "InputEmailErrorPattern" : "Введіть правильну пошту"
+  },
+  "Filters" : {
+    "Title" : "Фільтр",
+    "PriceTitle" : "Ціна",
+    "CategoryTitle"  : "Категорія",
+    "SubmitText" : "Застосувати",
+    "PriceFrom" : "Від",
+    "PriceTo" : "до"
+  },
+  "Cart": {
+    "Title" : "Кошик",
+    "ToProductsText" : "Продовжити покупки",
+    "ToCheckoutText" : "Оформити замовлення",
+    "ProductsSingularCount" : " товар",
+    "ProductsMultiCount" : " товари",
+    "CrosselsTitle" : "Вас може також зацікавити",
+    "Total" : "Сума",
+    "LoadingText" : "Зачекайте, кошик завантажується..."
+  },
+  "ResetPasswordPage": {
+    "FirstPasswordLabel" : "Введіть пароль",
+    "FirstPasswordPlaceholder" : "Введіть пароль",
+    "FirstPasswordError" : "Пароль має містити не менше 6 символів",
+    "SecondPasswordLabel" : "Повторіть пароль",
+    "SecondPasswordPlaceholder" : "Введіть пароль",
+    "SecondPasswordError" : "Повторіть пароль"
+  },
+  "ConfirmEmailPage" : {
+    "ToProfileText" : "На сторінку профілю"
+  },
+  "AuthorisationForm" : {
+    "LoginLabel" : "Логін",
+    "LoginPlaceholder" : "Введіть адресу електронної пошти або логін",
+    "LoginError" : "Введіть логін",
+    "LoginErrorTwo" : "Такий логін вже існує",
+    "PasswordLabel" : "Пароль",
+    "PasswordPlaceholder" : "Введіть пароль",
+    "PasswordError" : "Пароль має бути мінімум 6 символів",
+    "RepeatPasswordLabel" : "Повторіть пароль",
+    "RepeatPasswordPlaceholder" : "Введіть пароль",
+    "RepeatPasswordError" : "Паролі повинні збігатися",
+    "EmailLabel" : " Введіть email",
+    "EmailPlaceholder" : "Введіть адресу електронної пошти",
+    "EmailError" : "Введіть адресу електронної пошти",
+    "EmailPatternError" : "Введіть правильну пошту"
+  },
+  "AuthorisationText" : {
+    "LoginTitle" : "Вітаємо!",
+    "LoginStaticText" : "Увійти",
+    "LoginActiveText" : "Перевіряємо...",
+    "LoginHelperText" : "Вже маєте акаунт?",
+    "LoginHelperTextTwo" : "Зареєстрований користувач?",
+    "RegisterStaticText" : "Зареєструватись",
+    "RegisterActiveText" : "Зачекайте...",
+    "RegisterHelperText" : "Новий користувач?",
+    "RegisterHelperTextTwo" : "Не маєте акаунту?",
+    "ResetPasswordHelperText" : "Забули пароль?",
+    "ErrorLoginTitle" : "Невірний логін або пароль",
+    "ErrorRepeatText" : "Спробувати знову",
+    "ResetPasswordTitle" : "Скинути пароль",
+    "UpdateStaticText" : "Оновити",
+    "UpdateActiveText" : "Оновлюємо",
+    "SuccessTitle" : " Реєстрація успішна",
+    "SuccessButtonText" : "До товарів"
+  }
+}

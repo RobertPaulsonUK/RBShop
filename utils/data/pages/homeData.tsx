@@ -1,9 +1,9 @@
 import {HOME_ENDPOINT} from "@/utils/constants/endpoints";
 import {IHome} from "@/types/home.interface";
 
-async function HomeData():Promise <IHome | null > {
+async function HomeData(locale : string):Promise <IHome | null > {
     try {
-        const response =  await fetch(HOME_ENDPOINT)
+        const response =  await fetch(`${HOME_ENDPOINT}?lang=${locale}`)
         if (!response.ok) {
             throw new Error('Ошибка сети');
         }

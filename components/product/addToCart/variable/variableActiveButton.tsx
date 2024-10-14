@@ -1,6 +1,7 @@
 "use client"
 import {FC, useEffect, useState} from "react";
 import {useCart} from "@/hooks/CartHook";
+import {useTranslations} from "next-intl";
 
 interface IAddToCart {
     id : number
@@ -50,6 +51,7 @@ const VariableActiveButton:FC<IAddToCart> = ({id,stockStatus,stock,closeHandler}
         setIsAdding(true)
         addToCartHandler(id,1)
     }
+    const t = useTranslations('Product')
     return(
         <>
             <button
@@ -60,16 +62,16 @@ const VariableActiveButton:FC<IAddToCart> = ({id,stockStatus,stock,closeHandler}
                     (
                         <>
                             <span
-                                data-text="Додаємо"
+                                data-text={t('BuyActiveText')}
                                 className={"add-to-cart-process"}>
-                                Додаємо
+                                {t('BuyActiveText')}
                             </span>
                         </>
                     )
                 :
                     (
                         <>
-                            Купити
+                            {t('BuyStaticText')}
                             <span
                                 className="block content-[''] bg-[url('/images/buy.svg')] bg-no-repeat bg-cover w-5 h-5 ">
                             </span>

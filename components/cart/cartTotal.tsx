@@ -1,12 +1,16 @@
 import {FC} from "react";
 import ToShopButton from "@/components/cart/buttons/toShopButton";
 import CheckoutButton from "@/components/cart/buttons/checkoutButton";
+import {useTranslations} from "next-intl";
 
 const CartTotal:FC<{total : number,currency : string}> = ({total,currency}) => {
+    const t = useTranslations('Cart')
     return(
         <div className="flex flex-col justify-end gap-4 items-end mb-4 sm:items-center">
             <div className="flex items-center justify-end ml-auto mr-0 gap-6">
-                <div className="text-[32px] leading-[34px] font-medium text-[#333E48]">Сума</div>
+                <div className="text-[32px] leading-[34px] font-medium text-[#333E48]">
+                    {t('Total')}
+                </div>
                 <div className="text-2xl text-[#333E48] font-bold">{total / 100}<span
                     className="text-[#333E48] text-xs font-bold]">{currency}</span>
                 </div>

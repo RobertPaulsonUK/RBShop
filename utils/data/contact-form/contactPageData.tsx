@@ -1,10 +1,10 @@
 import { GET_CONTACT_PAGE_DATA_ENDPOINT} from "@/utils/constants/endpoints";
 import {IContactsPageInterface} from "@/types/pages/contact.page.interface";
 
-async  function GetContactPageData () :Promise<IContactsPageInterface | null>
+async  function GetContactPageData (locale : string) :Promise<IContactsPageInterface | null>
 {
     try {
-        const response = await fetch(GET_CONTACT_PAGE_DATA_ENDPOINT, {
+        const response = await fetch(`${GET_CONTACT_PAGE_DATA_ENDPOINT}?lang=${locale}`, {
             method: 'GET',
         });
         if (!response.ok) {

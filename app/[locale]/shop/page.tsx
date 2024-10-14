@@ -11,9 +11,9 @@ import ShopTitle from "@/components/shop/shopTitle";
 export const metadata: Metadata = {
     title: "Shop",
 };
-export default async function Shop({searchParams}: { searchParams: { [key: string]: string } }) {
-    const data = await ShopData(searchParams)
-    const filtersData = await FiltersData()
+export default async function Shop({searchParams,params}: { searchParams: { [key: string]: string } }) {
+    const data = await ShopData(searchParams,params.locale)
+    const filtersData = await FiltersData(params.locale)
     return(
         <>
             {data?.breadcrumbs && <Breadcrumbs items={data.breadcrumbs}/>}

@@ -1,6 +1,7 @@
 "use client"
 import {FC, useState,useEffect} from "react";
 import {IFilterPrices} from "@/types/filters/filters.interface";
+import {useTranslations} from "next-intl";
 
 const FilterPrices:FC<{prices : IFilterPrices,searchParams : URLSearchParams}> = ({prices,searchParams}) => {
 
@@ -36,10 +37,12 @@ const FilterPrices:FC<{prices : IFilterPrices,searchParams : URLSearchParams}> =
             setMaxPrice(Number(value))
         }
     }
-
+    const t = useTranslations('Filters')
     return(
         <div className="mb-[50px] md:mb-5">
-            <div className="text-[#46B1F0] text-lg font-medium mb-3">Ціна</div>
+            <div className="text-[#46B1F0] text-lg font-medium mb-3">
+                {t('PriceTitle')}
+            </div>
             <div className="range-slider">
                 <span className="range-min-wrapper">
                     <input onChange={handleMinPriceChange}
@@ -64,7 +67,9 @@ const FilterPrices:FC<{prices : IFilterPrices,searchParams : URLSearchParams}> =
             </div>
             <div className="flex items-center justify-center gap-4 mt-3">
                 <div className="flex items-center justify-start gap-4">
-                    <div className="text-sm font-medium text-[#333E48]">Від</div>
+                    <div className="text-sm font-medium text-[#333E48]">
+                        {t('PriceFrom')}
+                    </div>
                     <input
                         className="p-3 rounded-lg bg-[#F6F6F6] border border-solid boreder-[#AEAEAE] shadow_mod text-sm w-[58px]"
                         type="text"
@@ -74,7 +79,9 @@ const FilterPrices:FC<{prices : IFilterPrices,searchParams : URLSearchParams}> =
                     </input>
                 </div>
                 <div className="flex items-center justify-start gap-4">
-                    <div className="text-sm font-medium text-[#333E48]">до</div>
+                    <div className="text-sm font-medium text-[#333E48]">
+                        {t('PriceTo')}
+                    </div>
                     <input
                         className="p-3 rounded-lg bg-[#F6F6F6] border border-solid boreder-[#AEAEAE] shadow_mod text-sm w-[58px]"
                         type="text"

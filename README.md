@@ -1,47 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-
 ## TODO 
 ### Backend
-1. сделать формление заказа
+1. Сделать оформление заказа
+2. Вывести метадату
+3. Вывести для тех страниц хлебные крошки
 
 ### Frontend
 1. Сделать обработку ошибок для авторизации и сброса почты
 2. Исправить запрет на скролл при успешной авторизации
-3. Сделать кнопки анимированными на авторизации
-4. сделать роут для активации таба вишлист
+3. Добавить вывод сообщений с корзины
+4. Вывести для тех страниц хлебные крошки
+5. Вывести метадату
+6. Сделать страницу оплаты
+7. Сделать страницу спасибо
+8. Сделать страницу загрузки
+9. Сделать страницу ошибки
+

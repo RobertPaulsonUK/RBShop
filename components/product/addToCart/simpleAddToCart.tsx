@@ -3,6 +3,7 @@ import {FC, useEffect, useState} from "react";
 import {useCart} from "@/hooks/CartHook";
 import RegularAddToCartText from "@/components/ui/actionsStates/addToCart/regularText";
 import ActiveStateText from "@/components/ui/actionsStates/activeText";
+import {useTranslations} from "next-intl";
 
 interface IAddToCart {
     id : number
@@ -15,7 +16,7 @@ const SimpleAddToCart:FC<IAddToCart> = ({id,stockStatus,stock}) => {
     const [cartQuantity,setCartQuantity] = useState(0)
     const [isDisabled,setIsDisabled] = useState(false)
     const [isAdding,setIsAdding] = useState(false)
-
+    const t = useTranslations('Product')
     useEffect(() => {
         checkIsInCart()
     }, [items]);
@@ -56,7 +57,7 @@ const SimpleAddToCart:FC<IAddToCart> = ({id,stockStatus,stock}) => {
                 >
                 {isAdding ?
                     (
-                        <ActiveStateText text={"Додаємо"}/>
+                        <ActiveStateText text={t('BuyActiveText')}/>
                     )
                 :
                     (

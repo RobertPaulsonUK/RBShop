@@ -2,11 +2,13 @@ import {FC} from "react";
 import {IProductSimpleInterface} from "@/types/products/product.simple.interface";
 import Link from "next/link";
 import Image from "next/image";
+import {useTranslations} from "next-intl";
 
 interface IInterface {
     product : IProductSimpleInterface
 }
 const SaleProduct:FC<IInterface> = ({product}) => {
+    const t = useTranslations('Product')
     return(
         <div className={"home-slide"}>
             <Link
@@ -15,7 +17,7 @@ const SaleProduct:FC<IInterface> = ({product}) => {
                 <div className="w-[60%] lg:w-[70%] md:w-[100%]">
                     <div
                         className="mb-[10px] text-[40px] leading-[48px] font-semibold text-[#F6F6F6] sm:text-base">
-                        Спеціальна пропозиція
+                        {t('SpecialProposeTitle')}
                     </div>
                     <div className="mb-[10px] text-xl text-[#F6F6F6] sm:text-sm">{product.name}</div>
                     <div
@@ -29,7 +31,7 @@ const SaleProduct:FC<IInterface> = ({product}) => {
                     <div
                         className="bg-[#005BA9] rounded-tr-[20px] rounded-bl-[20px] absolute top-0 right-0 min-w-[132px] py-2">
                         <div className="text-[13px] leading-6 text-[#F6F6F6] text-center font-normal">
-                            Знижка
+                            {t('Discount')}
                         </div>
                         <div className="text-xl font-bold text-center text-[#F6F6F6]">{product.regularPrice - product.salePrice}<span
                             className="text-xs font-bold text-center text-[#F6F6F6]">{product.currency}</span>

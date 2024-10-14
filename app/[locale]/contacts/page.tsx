@@ -7,8 +7,9 @@ export const metadata: Metadata = {
     title: "Contacts",
     description: "Fast Woocommerce shop",
 };
-export default async function Contacts() {
-    let data = await GetContactPageData()
+export default async function Contacts(searchParams) {
+    const {params} = searchParams
+    let data = await GetContactPageData(params.locale)
     return (
         <>
             {data?.breadcrumbs && <Breadcrumbs items={data.breadcrumbs}/>}

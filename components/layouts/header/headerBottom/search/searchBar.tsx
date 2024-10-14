@@ -4,6 +4,7 @@ import SearchIcon from "@/components/icons/searchIcon";
 import SearchList from "@/components/layouts/header/headerBottom/search/searchList";
 import Link from "next/link";
 import {ISearchItemInterface} from "@/types/search.interface";
+import {useTranslations} from "next-intl";
 
 interface ISearchBar {
     query : string
@@ -13,7 +14,7 @@ interface ISearchBar {
     products : ISearchItemInterface[]
 }
 const SearchBar:FC<ISearchBar> = ({query,setQuery,isOpen,setIsOpen,products}) => {
-
+    const t = useTranslations('Header');
     return(
         <>
             <form method={"GET"} action={"/shop"}  className={`header__search relative min-h-10 w-full pl-5 pr-[1px] flex items-center justify-between bg-[#F6F6F6] shadow_mod md:pl-0 md:w-[40px] md:h-[35px] md:duration-200 ${products.length > 0 ? 'rounded-[0]' : 'rounded-[48px]'} ${isOpen ? 'active' : ''}`}
@@ -22,7 +23,7 @@ const SearchBar:FC<ISearchBar> = ({query,setQuery,isOpen,setIsOpen,products}) =>
                 <input
                     className={`search__inpt min-h-10 w-full bg-[#F6F6F6] duration-200 outline-none hover:placeholder:text-[#46B1F0] focus:text-black md:w-0 rounded-[48px] ${isOpen ? 'active' : ''}`}
                     type={"text"}
-                    placeholder={"Пошук товарів"}
+                    placeholder={t('SearchPlaceholder')}
                     name={"s"}
                     value={query}
                     onChange={(e) => {

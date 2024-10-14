@@ -11,6 +11,7 @@ import AnimatedTextButton from "@/components/ui/animatedTextButton";
 import ExpiredModal from "@/components/modals/general/expiredModal";
 import {IContactsData} from "@/types/pages/contact.page.interface";
 import ContactsDetails from "@/components/contacts/contactsDetails";
+import {useTranslations} from "next-intl";
 
 const ContactPageForm:FC<{pageData : IContactsData}> = ({pageData}) => {
     const {register,handleSubmit,formState: { errors },watch,reset} = useForm()
@@ -35,31 +36,36 @@ const ContactPageForm:FC<{pageData : IContactsData}> = ({pageData}) => {
     const resetForm = () => {
         setMessage(null)
     }
+    const t = useTranslations('ContactsForm')
     return(
         <>
             <form className={"max-w-[800px] mx-auto"}
                   onSubmit={handleSubmit(onFormSubmit)}>
                 <div className={"py-6 px-[156px] bg-[#46B1F0] rounded-[48px] mb-[30px] lg:px-[16px]"}>
                     <ContactsDetails data={pageData}/>
-                    <label className="text-[#F6F6F6] text-lg font-medium mb-2 block">ПІБ</label>
+                    <label className="text-[#F6F6F6] text-lg font-medium mb-2 block">
+                        {t('NameTitle')}
+                    </label>
                     <div className="flex justify-center items-start gap-[13px] mb-9 sm:flex-col sm:mb-2">
                         <InputName register={register} errors={errors} inputId={"contact-page-name"}/>
                         <InputSecondName register={register} errors={errors} inputId={'contact-page-secondname'}/>
                     </div>
                     <div className={"mb-9"}>
-                        <label className="text-[#F6F6F6] text-lg font-medium mb-2 block" htmlFor="contact-page-email">Email</label>
+                        <label className="text-[#F6F6F6] text-lg font-medium mb-2 block" htmlFor="contact-page-email">
+                            {t('EmailTitle')}
+                        </label>
                         <InputEmail register={register} errors={errors} inputId={"contact-page-email"}/>
                     </div>
-                    <label className="text-[#F6F6F6] text-lg font-medium mb-2 block" htmlFor="">
-                        Коментар або повідомлення
+                    <label className="text-[#F6F6F6] text-lg font-medium mb-2 block">
+                        {t('TextAreaTitle')}
                     </label>
                     <TextAreaMessage register={register} inputId={'modal-contact-text'}/>
                 </div>
                 <AnimatedTextButton isInProcess={isSending}
                                     isDisabled={!!errors.name || !!errors.secondName || !!errors.email}
                                     staticClass={"w-[400px] mx-auto py-[8px] px-5 block rounded-[40px] bg-[#46B1F0] border-none cursor-pointer text-[#F6F6F6] text-sm font-medium hover:bg-[linear-gradient(90deg,#46B1F0_0%,#005BA9_100%)]  hover:shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] duration-200 sm:w-full"}
-                                    regularText={'Надіслати'}
-                                    activeText={'Надсилаємо'}/>
+                                    regularText={t('FormStaticButtonText')}
+                                    activeText={t('FormActiveButtonText')}/>
             </form>
             {message && <ExpiredModal message={message} clickHandler={resetForm}/>}
         </>

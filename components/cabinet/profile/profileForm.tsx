@@ -8,6 +8,7 @@ import {useUser} from "@/hooks/UserHook";
 import ImageInput from "@/components/cabinet/profile/imageInput";
 import AnimatedTextButton from "@/components/ui/animatedTextButton";
 import ExpiredModal from "@/components/modals/general/expiredModal";
+import {useTranslations} from "next-intl";
 
 interface Props {
     userData : IUserDataInterface,
@@ -56,6 +57,7 @@ const ProfileForm:FC<Props> = ({userData,updateHandler}) => {
             setMessage(result.message)
         }
     }
+    const t = useTranslations('EditProfile')
     return(
         <>
             <form onSubmit={handleSubmit(onFormSubmit)}>
@@ -65,19 +67,19 @@ const ProfileForm:FC<Props> = ({userData,updateHandler}) => {
                 <div className="flex mt-4 gap-4 sm:flex-col">
                     <div className="w-full">
                         <label className="text-[#46B1F0] text-lg font-medium mb-2 block">
-                            ПІБ
+                            {t('NameLabel')}
                         </label>
                         <div
                             className="flex flex-col justify-center items-center gap-[13px] mb-9 sm:flex-col sm:mb-2">
                             <input className={"w-full p-[10px] rounded-3xl bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0] focus:text-black shadow_mod"}
-                                   placeholder={"Ім’я"}
+                                   placeholder={t('NamePlaceholder')}
                                    type={"text"}
                                    {...register(
                                        'first_name',{}
                                    )}
                             />
                             <input className={"w-full p-[10px] rounded-3xl bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0] focus:text-black shadow_mod"}
-                                   placeholder={"Прізвище"}
+                                   placeholder={t('SecondNamePlaceholder')}
                                    type={"text"}
                                    {...register(
                                        'last_name',{}
@@ -87,18 +89,18 @@ const ProfileForm:FC<Props> = ({userData,updateHandler}) => {
                     </div>
                     <div className="w-full">
                         <label className="text-[#46B1F0] text-lg font-medium mb-2 block">
-                            Адреса
+                            {t('AddressLabel')}
                         </label>
                         <div
                             className="flex flex-col justify-center items-center gap-[13px] mb-9 sm:flex-col sm:mb-2">
                             <input className={"w-full p-[10px] rounded-3xl bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0] focus:text-black shadow_mod"}
-                                   placeholder={"Місто"}
+                                   placeholder={t('AddressOnePlaceholder')}
                                    {...register(
                                        'billing_city',{}
                                    )}
                             />
                             <input className={"w-full p-[10px] rounded-3xl bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0] focus:text-black shadow_mod"}
-                                   placeholder={"Вул., буд., кв."}
+                                   placeholder={t('AddressTwoPlaceholder')}
                                    {...register(
                                        'billing_address_1',{}
                                    )}
@@ -109,12 +111,12 @@ const ProfileForm:FC<Props> = ({userData,updateHandler}) => {
                 <div className="flex gap-4 sm:flex-col">
                     <div className="w-full">
                         <label className="text-[#46B1F0] text-lg font-medium mb-2 block">
-                            Нікнейм
+                            {t('NiceNameLabel')}
                         </label>
                         <div
                             className="flex flex-col justify-center items-center gap-[13px] mb-9 sm:flex-col sm:mb-2">
                             <input className={"w-full p-[10px] rounded-3xl bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0] focus:text-black shadow_mod"}
-                                   placeholder={"Введіть Нікнейм користувача"}
+                                   placeholder={t('NiceNamePlaceholder')}
                                    type={"text"}
                                    {...register(
                                        'display_name',{}
@@ -125,19 +127,19 @@ const ProfileForm:FC<Props> = ({userData,updateHandler}) => {
                     </div>
                     <div className="w-full">
                         <label className="text-[#46B1F0] text-lg font-medium mb-2 block">
-                            Email
+                            {t('EmailLabel')}
                         </label>
                         <div
                             className="flex flex-col justify-center items-center gap-[13px] mb-9 sm:flex-col sm:mb-2">
                             <input className={"w-full p-[10px] rounded-3xl bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0] focus:text-black shadow_mod"}
-                                   placeholder={"Введіть адресу електронної пошти"}
+                                   placeholder={t('EmailPlaceholder')}
                                    type={"email"}
                                    {...register(
                                        'user_email',{
-                                           required : 'Введіть адресу електронної пошти',
+                                           required : t('EmailError'),
                                            pattern : {
                                                value : /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                                               message : "Введіть правильну пошту"
+                                               message : t('EmailPatternError')
                                            }
                                        }
                                    )}
@@ -152,22 +154,22 @@ const ProfileForm:FC<Props> = ({userData,updateHandler}) => {
                 <div className="flex gap-4 sm:flex-col">
                     <div className="w-1/2 sm:w-full mb-5">
                         <label className="text-[#46B1F0] text-lg font-medium mb-2 block">
-                            Телефон
+                            {t('PhoneLabel')}
                         </label>
                         <div
                             className="flex flex-col justify-center items-center gap-[13px] mb-9 sm:flex-col sm:mb-2">
                             <input className={"w-full p-[10px] rounded-3xl bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0] focus:text-black shadow_mod"}
-                                   placeholder={"+380"}
+                                   placeholder={t('PhonePlaceholder')}
                                    type={"tel"}
                                    {...register(
                                        'billing_phone',{
-                                           required: "Введіть номер телефону",
+                                           required: t('PhoneError'),
                                            pattern: {
                                                value: /^\+380\d{9}$/,
-                                               message: "Введіть правильний номер телефону (+380)"
+                                               message: t('PhonePatternError')
                                            },
                                            validate: (value) =>
-                                               value && /^\d+$/.test(value.replace(/\D/g, '')) || "Допускаються лише цифри",
+                                               value && /^\d+$/.test(value.replace(/\D/g, '')) || t('PhoneValidateError'),
                                        }
                                    )}
                             />
@@ -180,8 +182,8 @@ const ProfileForm:FC<Props> = ({userData,updateHandler}) => {
                 </div>
                 <AnimatedTextButton isInProcess={isUpdating}
                                     isDisabled={!!(errors.billing_phone || errors.user_email)}
-                                    regularText={"Зберегти зміни"}
-                                    activeText={"Оновлюємо"}/>
+                                    regularText={t('ButtonStaticText')}
+                                    activeText={t('ButtonActiveText')}/>
             </form>
             {message && <ExpiredModal message={message}/>}
         </>

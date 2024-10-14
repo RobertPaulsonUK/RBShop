@@ -1,6 +1,7 @@
 import {FC} from "react";
 import Image from "next/image";
 import {IUserDataInterface} from "@/types/user/user.data.interface";
+import {useTranslations} from "next-intl";
 
 const ProfileMini:FC<{
     userData : IUserDataInterface
@@ -14,9 +15,12 @@ const ProfileMini:FC<{
         return [billingCity, billingAddress].filter(Boolean).join(', ');
     }
     const currentIndex = 2
+    const t = useTranslations('Cabinet')
     return(
         <>
-            <div className="text-[#46B1F0] text-[32px] leading-[34px] mb-[18px]">Профіль</div>
+            <div className="text-[#46B1F0] text-[32px] leading-[34px] mb-[18px]">
+                {t('DetailsTitle')}
+            </div>
             <div className="flex items-start justify-start gap-5">
                 <div className="w-max cursor-pointer">
                     <Image src={userData.userAvatar.length > 0 ? userData.userAvatar : '/images/cabinet/cabinetphoto-1.webp'}

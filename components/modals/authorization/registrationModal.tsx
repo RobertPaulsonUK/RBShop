@@ -7,6 +7,7 @@ import Input from "@/components/ui/input";
 import CreateUser from "@/utils/data/auth/createUser";
 import {useUser} from "@/hooks/UserHook";
 import AnimatedTextButton from "@/components/ui/animatedTextButton";
+import {useTranslations} from "next-intl";
 
 
 interface IRegistrationModals {
@@ -17,11 +18,13 @@ interface IRegistrationModals {
     errorHandler : () => void
 }
 const RegistrationModals:FC<IRegistrationModals> = ({isActive,closeHandler,authoriseHandler,successHandler,errorHandler}) => {
+    const t = useTranslations('AuthorisationText')
+    const f = useTranslations('AuthorisationForm')
     const {setUserLogged,isLogged} = useUser()
     const errors = {
-        login : 'Введите логин',
-        password : 'Пароль должен быть минимум 6 символов',
-        repeatPassword : 'Пароли должны совпадать'
+        login : f('LoginError'),
+        password : f('PasswordError'),
+        repeatPassword : f('RepeatPasswordError')
     }
     const [login,setLogin] = useState<string>('')
     const  [isLoginError,setIsLoginError] = useState<boolean>(false)
@@ -83,7 +86,7 @@ const RegistrationModals:FC<IRegistrationModals> = ({isActive,closeHandler,autho
         const token = await CreateUser(requestData)
         setCreating(false)
         if(!token) {
-            setLoginErrorText('Такой логин уже существует')
+            setLoginErrorText(f('LoginErrorTwo'))
             setIsLoginError(true)
             return
         }
@@ -97,59 +100,57 @@ const RegistrationModals:FC<IRegistrationModals> = ({isActive,closeHandler,autho
             <div className="max-w-[372px] mx-auto mt-8">
                 <div className="bg-[#F6F6F6] px-4 pb-4 pt-16 rounded-3xl relative">
                     <ModalClose clickHandler={closeHandler}/>
-                        <div className="text-lg font-medium text-[#333E48] mb-5 text-center">Вітаємо!</div>
+                        <div className="text-lg font-medium text-[#333E48] mb-5 text-center">
+                            {t('LoginTitle')}
+                        </div>
                         <form>
                             <Input
                                 label={true}
                                 labelClass={"text-[#46B1F0] text-lg font-medium mb-2 block"}
-                                labelText={"Логін"}
+                                labelText={f('LoginLabel')}
                                 inputValue={login}
                                 inputClass={`p-[10px] ${isLoginError ? 'mb-2' : 'mb-6'} rounded-3xl w-full bg-[#F6F6F6] duration-200 text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0] focus:text-black shadow_mod`}
                                 inputHandler={loginHandler}
                                 type={"text"}
                                 isError={isLoginError}
-                                placeholder={"Введіть адресу електронної пошти або логін"}
+                                placeholder={f('LoginPlaceholder')}
                                 errorText={loginErrorText}/>
                             <Input
                                 label={true}
                                 labelClass={"text-[#46B1F0] text-lg font-medium mb-2 block"}
-                                labelText={"Пароль"}
+                                labelText={f('PasswordLabel')}
                                 inputValue={password}
                                 inputClass={`p-[10px] ${isPasswordError ? 'mb-2' : 'mb-6'} outline-none rounded-3xl w-full bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0] focus:text-black shadow_mod`}
                                 inputHandler={passwordHandler}
                                 type={"password"}
                                 isError={isPasswordError}
-                                placeholder={"Введіть пароль"}
+                                placeholder={f('PasswordPlaceholder')}
                                 errorText={errors.password}/>
                             <Input
                                 label={true}
                                 labelClass={"text-[#46B1F0] text-lg font-medium mb-2 block"}
-                                labelText={"Повторіть пароль"}
+                                labelText={f('RepeatPasswordLabel')}
                                 inputValue={repeatPassword}
                                 inputClass={`p-[10px] ${isRepeatPasswordError ? 'mb-2' : 'mb-6'} rounded-3xl w-full bg-[#F6F6F6] duration-200 outline-none text-sm text-[#AEAEAE] font-normal hover:placeholder:text-[#46B1F0] focus:text-black shadow_mod`}
                                 inputHandler={repeatPasswordHandler}
                                 type={"password"}
                                 isError={isRepeatPasswordError}
-                                placeholder={"Введіть пароль"}
+                                placeholder={f('RepeatPasswordPlaceholder')}
                                 errorText={errors.repeatPassword}/>
                             <AnimatedTextButton isInProcess={creating}
                                                 isDisabled={isDisabled}
                                                 clickHandler={submitHandler}
-                                                regularText={"Зареєструватись"}
-                                                activeText={"Зачекайте..."}/>
-                            {/*<Button*/}
-                            {/*    classname={`modal_login mx-auto py-[10px] px-5 block rounded-[40px] border-none cursor-pointer text-sm font-medium duration-200 ${isDisabled ? 'bg-[#AEAEAE] text-[#F6F6F6] pointer-events-none' : 'bg-[#46B1F0] text-[#F6F6F6]'}`}*/}
-                            {/*    text={"Зареєструватись"}*/}
-                            {/*    clickHandler={submitHandler}/>*/}
+                                                regularText={t('RegisterStaticText')}
+                                                activeText={t('RegisterActiveText')}/>
 
                         </form>
                         <SocialRegistration/>
 
                         <div className="mt-2 mb-2 pt-2 pb-2 text-sm font-normal text-[#AEAEAE] text-center">
-                            Вже маєте акаунт?
+                            {t('LoginHelperText')}
                         </div>
                         <Button classname={"w-max py-[10px] px-[24px] mx-auto block text-sm font-medium text-[#333E48] rounded-[48px] border-2 border-solid border-[#46B1F0] transition-all duration-200 hover:text-white hover:bg-[#46B1F0]"}
-                                text={"Увійти"}
+                                text={t('LoginStaticText')}
                                 clickHandler={authoriseHandler}/>
 
                 </div>

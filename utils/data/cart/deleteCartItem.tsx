@@ -4,11 +4,12 @@ interface IRequestData {
     token? : string
     cartKey? : string
     productKey : string
+    locale : string
 }
 
 async function DeleteCartData(requestData: IRequestData){
     const {token,cartKey} = requestData
-    let url = `${CART_ENDPOINT}item/${requestData.productKey}`
+    let url = `${CART_ENDPOINT}item/${requestData.productKey}?lang=${requestData.locale}`
     const headers = {};
     if (token) {
         headers['Authorization'] = `Bearer ${token}`;

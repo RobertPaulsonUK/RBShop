@@ -12,15 +12,15 @@ import {WishlistProvider} from "@/context/WishlistContext";
 import SuccessAddToWishlist from "@/components/modals/wishlist/successAddToWishlist";
 import ContactModal from "@/components/modals/contact-form/contactModal";
 
-export default async function Layout({children}) {
-    const headerData = await HeaderData()
-    const footerData = await FooterData()
+export default async function Layout({children,locale}) {
+    const headerData = await HeaderData({locale})
+    const footerData = await FooterData({locale})
     return (
         <>
             <UserProvider>
                 <ModalsProvider>
-                    <CartProvider>
-                        <WishlistProvider>
+                    <CartProvider locale={locale}>
+                        <WishlistProvider locale={locale}>
                             {headerData && <Header headerData={headerData}/>}
                             <div className="wrapper">
                                 <main className={"main"}>

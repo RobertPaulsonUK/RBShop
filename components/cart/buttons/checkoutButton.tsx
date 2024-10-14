@@ -2,6 +2,7 @@ import {FC} from "react";
 import Link from "next/link";
 import {useModals} from "@/hooks/ModalsHook";
 import {useRouter} from "next/navigation";
+import {useTranslations} from "next-intl";
 
 const CheckoutButton:FC = () => {
     const {modalsHandlers : {cartHandler}} =  useModals()
@@ -10,6 +11,7 @@ const CheckoutButton:FC = () => {
         cartHandler(false)
         router.push('/')
     }
+    const t = useTranslations('Cart')
     return(
         <>
 
@@ -20,7 +22,7 @@ const CheckoutButton:FC = () => {
                 }}
                 href={'/'}
                 className={"mx-auto py-[10px] px-5 block rounded-[40px] bg-[#46B1F0] border-none cursor-pointer text-[#F6F6F6] text-sm font-medium hover:bg-[linear-gradient(90deg,#46B1F0_0%,#005BA9_100%)]  hover:shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] duration-200 sm:w-full"}>
-                Оформити замовлення
+                {t('ToCheckoutText')}
             </Link>
         </>
     )

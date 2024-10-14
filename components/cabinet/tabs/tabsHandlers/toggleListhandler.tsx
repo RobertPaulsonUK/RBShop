@@ -1,14 +1,16 @@
 "use client"
 import {FC} from "react";
+import {useTranslations} from "next-intl";
 
 const ToggleListHandler:FC<{clickHandler : () => void,isOpen : boolean}> = ({clickHandler,isOpen}) => {
+    const t = useTranslations('Cabinet')
     return(
         <div className={`cabinet_mob_btn hidden justify-between items-center gap-[10px] py-2 cursor-pointer sm:flex-row-reverse sm:flex ${isOpen ? 'active' : ''}`}
             onClick={clickHandler}
         >
             <button
                 className="text-lg text-[#46B1F0] duration-200 group-hover:text-[#46B1F0] md:order-1 md:text-right">
-                Дії в профілі
+                {t('AsideTogglerActions')}
             </button>
             <svg className="min-w-[22px] h-[22px] md:rotate-180 sm:rotate-0" viewBox="0 0 18 16"
                  fill="none" xmlns="http://www.w3.org/2000/svg">

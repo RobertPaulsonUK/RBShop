@@ -10,12 +10,14 @@ import CartItem from "@/components/cart/item/cartItem";
 import CartGeneralCount from "@/components/cart/cartGeneralCount";
 import Crossell from "@/components/modals/cart/crossell/crossell";
 import EmptyCart from "@/components/cart/emptyCart";
+import {useTranslations} from "next-intl";
 const CartModal:FC = () => {
     const {modalsState : {isCartOpen},modalsHandlers : {cartHandler}} = useModals()
     const {cart,currency} = useCart()
     const closeHandler = () => {
         cartHandler(false)
     }
+    const t = useTranslations('Cart')
     return(
         <div
             className={`modal fixed top-0 left-0 right-0 bottom-0 w-full h-full opacity-0 invisible z-50 bg-[hsla(0,0%,0%,0.443)] duration-200 ${isCartOpen ? 'active' : ''}`}>
@@ -25,7 +27,7 @@ const CartModal:FC = () => {
                         <div>
                                 <ModalClose clickHandler={closeHandler}/>
                                 <div className="text-[32px] leading-[34px] font-semibold text-[#46B1F0] mb-3 sm:mb-5 sm:font-medium">
-                                    Кошик
+                                    {t('Title')}
                                 </div>
                                 {cart.items.length > 0 ? (
                                     <>

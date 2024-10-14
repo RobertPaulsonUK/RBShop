@@ -1,8 +1,10 @@
 import {FC} from "react";
 import Link from "next/link";
 import Image from "next/image";
+import {useTranslations} from "next-intl";
 
 const FilterInitBtn:FC<{clickHandler : () => void}> = ({clickHandler}) => {
+    const t = useTranslations('Filters')
     return(
         <>
             <Link
@@ -13,7 +15,9 @@ const FilterInitBtn:FC<{clickHandler : () => void}> = ({clickHandler}) => {
                     clickHandler();
                 }}
             >
-                <div className="text-xl font-medium text-[#46B1F0]">Фільтр</div>
+                <div className="text-xl font-medium text-[#46B1F0]">
+                    {t('Title')}
+                </div>
                 <Image
                     width={24}
                     height={24}

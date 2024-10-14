@@ -13,23 +13,24 @@ export const metadata: Metadata = {
     title: "Strum",
     description: "Fast Woocommerce shop",
 };
-export default async function Home() {
-    let data = await HomeData()
-  return (
-      <>
-          {data?.pageMenu && <HomeNavigation navItems={data.pageMenu}/>}
-          {data?.saleProducts && (
-              <HomeSlider>
-                  {data.saleProducts.map((product) => (
-                      <SaleProduct key={product.id} product={product} />
-                  ))}
-              </HomeSlider>
-          )}
-          {data?.popularProducts && <PopularProducts products={data.popularProducts}/>}
-          {data?.content && <HomeContent content={data.content}/> }
-          <Brands/>
-      </>
-  );
+export default async function Home(searchParams) {
+    const {params} = searchParams
+    const data = await HomeData(params.locale)
+      return (
+          <>
+              {data?.pageMenu && <HomeNavigation navItems={data.pageMenu}/>}
+              {data?.saleProducts && (
+                  <HomeSlider>
+                      {data.saleProducts.map((product) => (
+                          <SaleProduct key={product.id} product={product} />
+                      ))}
+                  </HomeSlider>
+              )}
+              {data?.popularProducts && <PopularProducts products={data.popularProducts}/>}
+              {data?.content && <HomeContent content={data.content}/> }
+              <Brands/>
+          </>
+      );
 }
 
 

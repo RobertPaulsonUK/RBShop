@@ -1,7 +1,10 @@
 import {IShopInterface} from "@/types/shop.interface";
 import {PRODUCTS_ENDPOINT} from "@/utils/constants/endpoints";
 
-async function ShopData(params: { [key: string]: string },categorySlug? : string): Promise<IShopInterface | null> {
+async function ShopData
+(params: { [key: string]: string },locale : string, categorySlug? : string)
+    :
+    Promise<IShopInterface | null> {
     try {
         const finalParams = Object.entries(params).flatMap(([key, value]) =>
             Array.isArray(value)
@@ -9,6 +12,7 @@ async function ShopData(params: { [key: string]: string },categorySlug? : string
                 : [[key, value]]
         );
         const queryString = new URLSearchParams(finalParams)
+        queryString.append("lang", locale);
         if(categorySlug) {
             queryString.append('category',categorySlug)
         }

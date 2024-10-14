@@ -9,8 +9,10 @@ export const metadata: Metadata = {
     title: "Privacy Policy",
     description: "Fast Woocommerce shop",
 };
-export default async function PrivacyPolicy() {
-    const pageData = await GetPrivacyPolicyPageData()
+export default async function PrivacyPolicy(searchParams) {
+    const {params} = searchParams
+
+    const pageData = await GetPrivacyPolicyPageData(params.locale)
     return (
         <>
             {pageData?.breadcrumbs && <Breadcrumbs items={pageData.breadcrumbs}/>}

@@ -1,4 +1,7 @@
+import {IBreadcrumb} from "@/types/shop.interface";
+
 export interface ICabinetInterface {
+    breadcrumbs : IBreadcrumb[]
     userData: IUserDataInterface
     activeOrders: IOrderInterface[] | []
     completedOrders: IOrderInterface[] | []

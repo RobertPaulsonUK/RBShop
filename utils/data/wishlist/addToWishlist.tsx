@@ -2,7 +2,7 @@ import { WISHLIST_ENDPOINT} from "@/utils/constants/endpoints";
 import Cookies from 'js-cookie';
 import {AUTH_TOKEN_NAME} from "@/utils/constants/constants";
 
-async function AddToWishlistItem(id : number){
+async function AddToWishlistItem(id : number,locale : string){
     const token = Cookies.get(AUTH_TOKEN_NAME)
 
     const headers = {};
@@ -14,7 +14,7 @@ async function AddToWishlistItem(id : number){
     }
 
     try {
-        const response = await fetch(`${WISHLIST_ENDPOINT}add/${id}`, {
+        const response = await fetch(`${WISHLIST_ENDPOINT}add/${id}?lang=${locale}`, {
             method: 'GET',
             headers: {
                 ...headers,

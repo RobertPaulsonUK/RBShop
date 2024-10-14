@@ -6,9 +6,12 @@ import CartTotal from "@/components/cart/cartTotal";
 import EmptyCart from "@/components/cart/emptyCart";
 import CartItem from "@/components/cart/item/cartItem";
 import CrossellWrapper from "@/components/cart/crossellWrapper";
+import {useTranslations} from "next-intl";
+import LoadingCart from "@/components/cart/loadingCart";
 
 const Cart:FC = () => {
-    const {cart,currency} = useCart()
+    const {cart,currency,dataLoading} = useCart()
+    const t = useTranslations('Cart')
     return(
         <>
             <section>
@@ -16,23 +19,28 @@ const Cart:FC = () => {
                     <div className="">
                         <div
                             className="text-[40px] leading-[48px] font-semibold text-[#46B1F0] mb-3 sm:text-[32px] sm:leading-[34px] sm:mb-5 sm:font-medium">
-                            Кошик</div>
-                        {cart.items.length > 0 ?
-                            <>
-                                <CartGeneralCount count={cart.count} className={"text-sm text-[#AEAEAE] font-medium mb-6"}/>
-                                {cart.items.map(
-                                    (item,index) => (
-                                        <CartItem item={item}
-                                                  key={index}
-                                                  currency={currency}/>
-                                    )
-                                )}
-                                <CartTotal total={cart.total} currency={currency}/>
-                            </>
+                            {t('Title')}
+                        </div>
+                        {dataLoading ?
+                            <LoadingCart/>
                             :
-                            <div className="min-h-[50vh]">
-                                <EmptyCart/>
-                            </div>
+                            cart.items.length > 0 ?
+                                    <>
+                                        <CartGeneralCount count={cart.count} className={"text-sm text-[#AEAEAE] font-medium mb-6"}/>
+                                        {cart.items.map(
+                                            (item,index) => (
+                                                <CartItem item={item}
+                                                          key={index}
+                                                          currency={currency}/>
+                                            )
+                                        )}
+                                        <CartTotal total={cart.total} currency={currency}/>
+                                    </>
+                                    :
+                                    <div className="min-h-[50vh]">
+                                        <EmptyCart/>
+                                    </div>
+
                         }
                     </div>
                 </div>

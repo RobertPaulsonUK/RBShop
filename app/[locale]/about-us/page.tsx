@@ -8,8 +8,9 @@ export const metadata: Metadata = {
     title: "About us",
     description: "Fast Woocommerce shop",
 };
-export default async function AboutUs() {
-    const pageData = await GetAboutUsPageData()
+export default async function AboutUs(searchParams) {
+    const {params} = searchParams
+    const pageData = await GetAboutUsPageData(params.locale)
     return (
         <>
             {pageData?.breadcrumbs && <Breadcrumbs items={pageData.breadcrumbs}/>}

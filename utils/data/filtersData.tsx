@@ -1,9 +1,14 @@
 import {FILTERS_ENDPOINT} from "@/utils/constants/endpoints";
 import {IFilters} from "@/types/filters/filters.interface";
 
-async function FiltersData(categorySlug? : string): Promise<IFilters | null> {
+async function FiltersData(locale : string, categorySlug? : string): Promise<IFilters | null> {
     try {
-        let res = await fetch(`${FILTERS_ENDPOINT}${categorySlug ? '?category=' + categorySlug : ''}`)
+        const queryString = new URLSearchParams()
+        queryString.append('lang',locale)
+        if(categorySlug) {
+            queryString.append('category',categorySlug)
+        }
+        let res = await fetch(`${FILTERS_ENDPOINT}?${queryString.toString()}`)
         const contentType = res.headers.get('content-type');
         if (contentType && contentType.includes('application/json')) {
             return await res.json();

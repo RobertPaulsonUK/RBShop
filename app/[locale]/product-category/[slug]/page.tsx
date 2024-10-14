@@ -9,9 +9,9 @@ import ShopTitle from "@/components/shop/shopTitle";
 
 export default async function Category({params,searchParams}: { params : { [key: string]: string },searchParams: { [key: string]: string } }) {
 
-    const slug = params.slug
-    const data = await ShopData(searchParams,slug)
-    const filtersData = await FiltersData(slug)
+    const {locale,slug} = params
+    const data = await ShopData(searchParams,locale,slug)
+    const filtersData = await FiltersData(locale,slug)
     return(
         <>
             {data?.breadcrumbs && <Breadcrumbs items={data.breadcrumbs}/>}

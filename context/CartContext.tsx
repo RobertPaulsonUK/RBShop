@@ -22,12 +22,15 @@ interface ICartInterface {
     updateCartItemHandler : (key : string,qty : number) => void
     removeFromCartHandler : (key : string) => void
     currency : string
+    locale : string
+    dataLoading : boolean
 }
 export const CartContext = createContext<ICartInterface | undefined>(undefined)
 
-export const CartProvider:FC<{ children: ReactNode }> = ({ children }) => {
+export const CartProvider:FC<{ children: ReactNode ,locale : string}> = ({ children ,locale}) => {
     const {modalsHandlers : {cartHandler}} = useModals()
     const {isLogged,getTokenFromCookies} = useUser()
+    const [dataLoading,setDataLoading] = useState<boolean>(true)
     const [cart,setCart] = useState({
         items : [],
         cross_sells : [],
@@ -36,6 +39,7 @@ export const CartProvider:FC<{ children: ReactNode }> = ({ children }) => {
     })
     const [cartCount,setCartCount] =useState<number>(0)
     useEffect(() => {
+        setDataLoading(true)
         getCartItems()
     }, [isLogged]);
 
@@ -44,10 +48,10 @@ export const CartProvider:FC<{ children: ReactNode }> = ({ children }) => {
         let cartData = null
         if(!token) {
             const cartKey = getCartKey()
-            cartData = await AddTocArt({cartKey : cartKey,productId : id,quantity : qty})
+            cartData = await AddTocArt({cartKey : cartKey,productId : id,quantity : qty, locale})
         }
         if(token) {
-            cartData = await AddTocArt({token : token,productId : id,quantity : qty})
+            cartData = await AddTocArt({token : token,productId : id,quantity : qty, locale})
         }
         if(cartData) {
             setCart(cartData)
@@ -59,10 +63,10 @@ export const CartProvider:FC<{ children: ReactNode }> = ({ children }) => {
         let cartData = null
         if(!token) {
             const cartKey = getCartKey()
-            cartData = await DeleteCartData({cartKey : cartKey,productKey : key})
+            cartData = await DeleteCartData({cartKey : cartKey,productKey : key, locale})
         }
         if(token) {
-            cartData = await DeleteCartData({token : token,productKey : key})
+            cartData = await DeleteCartData({token : token,productKey : key, locale})
         }
         if(cartData) {
             setCart(cartData)
@@ -73,10 +77,10 @@ export const CartProvider:FC<{ children: ReactNode }> = ({ children }) => {
         let cartData = null
         if(!token) {
             const cartKey = getCartKey()
-            cartData = await UpdateCartData({cartKey : cartKey,productKey : key,quantity : qty})
+            cartData = await UpdateCartData({cartKey : cartKey,productKey : key,quantity : qty, locale})
         }
         if(token) {
-            cartData = await UpdateCartData({token : token,productKey : key,quantity : qty})
+            cartData = await UpdateCartData({token : token,productKey : key,quantity : qty, locale})
         }
         if(cartData) {
             setCart(cartData)
@@ -88,13 +92,14 @@ export const CartProvider:FC<{ children: ReactNode }> = ({ children }) => {
         let cartData = null
         if(!token) {
             const cartKey = getCartKey()
-            cartData = await GetCart({cartKey : cartKey})
+            cartData = await GetCart({cartKey : cartKey, locale})
         }
         if(token) {
-            cartData = await GetCart({token : token})
+            cartData = await GetCart({token : token, locale})
         }
         if(cartData) {
             setCart(cartData)
+            setDataLoading(false)
         }
     }
     const getCartKey = () => {
@@ -115,7 +120,9 @@ export const CartProvider:FC<{ children: ReactNode }> = ({ children }) => {
             addToCartHandler,
             removeFromCartHandler,
             updateCartItemHandler,
-            currency : 'грн'
+            currency : 'грн',
+            locale,
+            dataLoading
         }}>
             {children}
         </CartContext.Provider>

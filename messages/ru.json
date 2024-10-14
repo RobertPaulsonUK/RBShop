@@ -1,0 +1,160 @@
+{
+  "HomePage": {
+    "PopularProductsTitle": "Хиты продаж"
+  },
+  "Header": {
+    "SearchPlaceholder": "Поиск товаров",
+    "CategoryMenuTitle": "Каталог товаров"
+  },
+  "Product": {
+    "NewArrival": "Новинка",
+    "SpecialProposeTitle": "Специальное предложение",
+    "Discount": "Скидка",
+    "BuyStaticText": "Купить",
+    "BuyActiveText": "Добавляем",
+    "VariableChooseText": "Выбрать",
+    "AttributesTitle": "Основные характеристики:",
+    "RelatedTitle": "Похожие товары:"
+  },
+  "ProductTabs": {
+    "FirstTab": "Характеристики",
+    "SecondTab": "Описание товара"
+  },
+  "EmptyMessages": {
+    "Variations": "На данный момент такой товар отсутствует",
+    "EmptyCart": "В вашей корзине пусто",
+    "EmptyWishlist": "Ваш список желаемого пуст",
+    "EmptyActiveOrders": "На данный момент у вас нет активных заказов",
+    "EmptyFinishedOrders": "На данный момент у вас нет выполненных заказов",
+    "EmptyProducts" : "На данный момент данные товары отсутствуют"
+  },
+  "Cabinet": {
+    "Title": "Личный кабинет",
+    "AsideTogglerActions": "Действия в профиле",
+    "DetailsTitle": "Профиль",
+    "OrderStatus": "Статус",
+    "OrderTTN": "ТТН"
+  },
+  "Wishlist": {
+    "Message": "Товар добавлен в избранное",
+    "Propose": "Вы можете просмотреть список избранных товаров в личном кабинете.",
+    "ButtonText": "Просмотреть избранное"
+  },
+  "Logout": {
+    "Title": "Выйти из профиля?",
+    "LogoutButtonText": "Выход",
+    "ContinueButtonText": "Остаться"
+  },
+  "EditProfile": {
+    "Title": "Редактирование профиля",
+    "NameLabel": "ФИО",
+    "NamePlaceholder": "Имя",
+    "SecondNamePlaceholder": "Фамилия",
+    "AddressLabel": "Адрес",
+    "AddressOnePlaceholder": "Город",
+    "AddressTwoPlaceholder": "Ул., д., кв.",
+    "NiceNameLabel": "Никнейм",
+    "NiceNamePlaceholder": "Введите Никнейм пользователя",
+    "EmailLabel": "Email",
+    "EmailPlaceholder": "Введите адрес электронной почты",
+    "EmailError": "Введите адрес электронной почты",
+    "EmailPatternError": "Введите правильный адрес электронной почты",
+    "PhoneLabel": "Телефон",
+    "PhonePlaceholder": "+380",
+    "PhoneError": "Введите номер телефона",
+    "PhonePatternError": "Введите правильный номер телефона (+380)",
+    "PhoneValidateError": "Допускаются только цифры",
+    "ButtonStaticText": "Сохранить изменения",
+    "ButtonActiveText": "Обновляем"
+  },
+  "CabinetTabs": {
+    "ActiveOrders": "Текущие заказы",
+    "FinishedOrders": "История заказов",
+    "EditProfile": "Редактировать профиль",
+    "Wishlist": "Избранное",
+    "ExitFromProfile": "Выйти из профиля"
+  },
+  "ContactsForm": {
+    "ModalTitle": "Свяжитесь с нами",
+    "DetailsTitle": "График работы:",
+    "FormStaticButtonText": "Отправить",
+    "FormActiveButtonText": "Отправляем",
+    "TextAreaPlaceholder": "Ваше сообщение",
+    "TextAreaTitle": "Комментарий или сообщение",
+    "NameTitle": "ФИО",
+    "NamePlaceholder": "Имя",
+    "SecondNamePlaceholder": "Фамилия",
+    "EmailPlaceholder": "Введите адрес электронной почты",
+    "EmailTitle": "Email"
+  },
+  "FormErrors": {
+    "InputNameError": "Введите имя",
+    "InputSecondNameError": "Введите фамилию",
+    "InputEmailErrorRequired": "Введите адрес электронной почты",
+    "InputEmailErrorPattern": "Введите правильный адрес электронной почты"
+  },
+  "Filters": {
+    "Title": "Фильтр",
+    "PriceTitle": "Цена",
+    "CategoryTitle": "Категория",
+    "SubmitText": "Применить",
+    "PriceFrom" : "От",
+    "PriceTo" : "до"
+  },
+  "Cart": {
+    "Title": "Корзина",
+    "ToProductsText": "Продолжить покупки",
+    "ToCheckoutText": "Оформить заказ",
+    "ProductsSingularCount": " товар",
+    "ProductsMultiCount": " товара",
+    "CrosselsTitle": "Вас также может заинтересовать",
+    "Total": "Сумма",
+    "LoadingText" : "Подождите, корзина загружается..."
+  },
+  "ResetPasswordPage": {
+    "FirstPasswordLabel": "Введите пароль",
+    "FirstPasswordPlaceholder": "Введите пароль",
+    "FirstPasswordError": "Пароль должен содержать не менее 6 символов",
+    "SecondPasswordLabel": "Повторите пароль",
+    "SecondPasswordPlaceholder": "Введите пароль",
+    "SecondPasswordError": "Повторите пароль"
+  },
+  "ConfirmEmailPage": {
+    "ToProfileText": "На страницу профиля"
+  },
+  "AuthorisationForm": {
+    "LoginLabel": "Логин",
+    "LoginPlaceholder": "Введите адрес электронной почты или логин",
+    "LoginError": "Введите логин",
+    "LoginErrorTwo": "Такой логин уже существует",
+    "PasswordLabel": "Пароль",
+    "PasswordPlaceholder": "Введите пароль",
+    "PasswordError": "Пароль должен быть минимум 6 символов",
+    "RepeatPasswordLabel": "Повторите пароль",
+    "RepeatPasswordPlaceholder": "Введите пароль",
+    "RepeatPasswordError": "Пароли должны совпадать",
+    "EmailLabel": "Введите email",
+    "EmailPlaceholder": "Введите адрес электронной почты",
+    "EmailError": "Введите адрес электронной почты",
+    "EmailPatternError": "Введите правильный адрес электронной почты"
+  },
+  "AuthorisationText": {
+    "LoginTitle": "Добро пожаловать!",
+    "LoginStaticText": "Войти",
+    "LoginActiveText": "Проверяем...",
+    "LoginHelperText": "Уже есть аккаунт?",
+    "LoginHelperTextTwo": "Зарегистрированный пользователь?",
+    "RegisterStaticText": "Зарегистрироваться",
+    "RegisterActiveText": "Подождите...",
+    "RegisterHelperText": "Новый пользователь?",
+    "RegisterHelperTextTwo": "Нет аккаунта?",
+    "ResetPasswordHelperText": "Забыли пароль?",
+    "ErrorLoginTitle": "Неправильный логин или пароль",
+    "ErrorRepeatText": "Попробовать снова",
+    "ResetPasswordTitle": "Сбросить пароль",
+    "UpdateStaticText": "Обновить",
+    "UpdateActiveText": "Обновляем",
+    "SuccessTitle": "Регистрация успешна",
+    "SuccessButtonText": "К товарам"
+  }
+}

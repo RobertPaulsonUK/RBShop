@@ -2,7 +2,7 @@ import { GET_USER_DATA_ENDPOINT} from "@/utils/constants/endpoints";
 import {ICabinetInterface} from "@/types/user/user.data.interface";
 
 
-async function GetUserData(token : string | undefined):Promise<ICabinetInterface | null>{
+async function GetUserData(token : string | undefined,locale : string):Promise<ICabinetInterface | null>{
     const headers = {};
     if (token) {
         headers['Authorization'] = `Bearer ${token}`;
@@ -13,7 +13,7 @@ async function GetUserData(token : string | undefined):Promise<ICabinetInterface
 
 
     try {
-        const response = await fetch(GET_USER_DATA_ENDPOINT, {
+        const response = await fetch(`${GET_USER_DATA_ENDPOINT}?lang=${locale}`, {
             method: 'GET',
             headers: {
                 ...headers,
@@ -28,6 +28,7 @@ async function GetUserData(token : string | undefined):Promise<ICabinetInterface
 
         if (data) {
             return {
+                breadcrumbs : data.breadcrumbs,
                 wishlist : data.wishlist,
                 userData : data.userData,
                 activeOrders : data.activeOrders,

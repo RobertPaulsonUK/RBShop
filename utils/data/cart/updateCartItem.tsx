@@ -5,6 +5,7 @@ interface IRequestData {
     cartKey? : string
     productKey : string
     quantity : number
+    locale : string
 }
 
 async function UpdateCartData(requestData: IRequestData){
@@ -12,7 +13,7 @@ async function UpdateCartData(requestData: IRequestData){
     const requestBody = {
         quantity : requestData.quantity.toString()
     }
-    let url = `${CART_ENDPOINT}item/${requestData.productKey}`
+    let url = `${CART_ENDPOINT}item/${requestData.productKey}?lang=${requestData.locale}`
     const headers = {};
     if (token) {
         headers['Authorization'] = `Bearer ${token}`;
