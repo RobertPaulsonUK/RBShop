@@ -11,6 +11,7 @@ interface IStateInterface {
     isAuthOpen: boolean
     isMenuOpen: boolean
     isCartOpen : boolean
+    isCartErrorOpen : boolean
     isWishlistOpen : boolean
     isContactFormOpen : boolean
 }
@@ -20,6 +21,7 @@ interface IHandlersInterface {
     menuHandler: () => void
     setMenuOpen: () => void
     cartHandler : (value : boolean) => void
+    cartErrorHandler : (value : boolean) => void
     wishlistHandler : () => void
     resetAllStates : () => void
     contactFormHandler : () => void
@@ -32,6 +34,7 @@ export const ModalsProvider: FC<{ children: ReactNode }> = ({ children }) => {
         isAuthOpen: false,
         isMenuOpen : false,
         isCartOpen : false,
+        isCartErrorOpen : false,
         isWishlistOpen : false,
         isContactFormOpen : false
     }
@@ -40,8 +43,8 @@ export const ModalsProvider: FC<{ children: ReactNode }> = ({ children }) => {
         handlers.resetAllStates()
     }, []);
     useEffect(() => {
-        const { isAuthOpen, isMenuOpen, isCartOpen, isWishlistOpen,isContactFormOpen } = state;
-        if (isCartOpen || isAuthOpen || isWishlistOpen || isContactFormOpen) {
+        const { isAuthOpen, isMenuOpen, isCartOpen, isWishlistOpen,isContactFormOpen,isCartErrorOpen } = state;
+        if (isCartOpen || isAuthOpen || isWishlistOpen || isContactFormOpen || isCartErrorOpen) {
             document.documentElement.classList.add('no-scroll-main');
         } else {
             document.documentElement.classList.remove('no-scroll-main');
@@ -66,6 +69,10 @@ export const ModalsProvider: FC<{ children: ReactNode }> = ({ children }) => {
         cartHandler : (value : boolean) => setState(prevState => ({
             ...prevState,
             isCartOpen: value,
+        })),
+        cartErrorHandler : (value : boolean) => setState(prevState => ({
+            ...prevState,
+            isCartErrorOpen: value,
         })),
         contactFormHandler : () => setState(prevState => ({
             ...prevState,

@@ -6,6 +6,8 @@ import "./custom.scss"
 import "./animation.scss"
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
+import {Suspense} from "react";
+import Loading from "@/app/[locale]/loading";
 
 const jost = Jost({
     subsets: ['latin'],
@@ -20,7 +22,6 @@ export const metadata: Metadata = {
     },
     description: "Some text from layout"
 }
-
 export default async function RootLayout({
     children,
     params: {locale}
@@ -36,7 +37,9 @@ export default async function RootLayout({
               className={jost.className}>
                 <NextIntlClientProvider messages={messages}>
                     <Layout locale={locale}>
+                        <Suspense fallback={<Loading />}>
                         {children}
+                        </Suspense>
                     </Layout>
                 </NextIntlClientProvider>
 

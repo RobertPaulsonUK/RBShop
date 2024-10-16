@@ -4,6 +4,7 @@ import {useCart} from "@/hooks/CartHook";
 import RegularAddToCartText from "@/components/ui/actionsStates/addToCart/regularText";
 import ActiveStateText from "@/components/ui/actionsStates/activeText";
 import {useTranslations} from "next-intl";
+import ExpiredModal from "@/components/modals/general/expiredModal";
 
 interface IAddToCart {
     id : number
@@ -11,7 +12,7 @@ interface IAddToCart {
     stock: boolean | number
 }
 const SimpleAddToCart:FC<IAddToCart> = ({id,stockStatus,stock}) => {
-    const {addToCartHandler,cart: {items}} = useCart()
+    const {addToCartHandler,cart: {items},generalError} = useCart()
     const [isInCart,setIsInCart] = useState(false)
     const [cartQuantity,setCartQuantity] = useState(0)
     const [isDisabled,setIsDisabled] = useState(false)
@@ -23,7 +24,7 @@ const SimpleAddToCart:FC<IAddToCart> = ({id,stockStatus,stock}) => {
     useEffect(() => {
         setIsAdding(false)
         checkIsDisabled()
-    }, [cartQuantity]);
+    }, [cartQuantity,generalError]);
     const checkIsInCart = () => {
         if(items.length === 0) {
             setIsInCart(false)

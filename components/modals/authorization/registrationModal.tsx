@@ -20,7 +20,7 @@ interface IRegistrationModals {
 const RegistrationModals:FC<IRegistrationModals> = ({isActive,closeHandler,authoriseHandler,successHandler,errorHandler}) => {
     const t = useTranslations('AuthorisationText')
     const f = useTranslations('AuthorisationForm')
-    const {setUserLogged,isLogged} = useUser()
+    const {setUserLogged,isLogged,locale} = useUser()
     const errors = {
         login : f('LoginError'),
         password : f('PasswordError'),
@@ -83,8 +83,17 @@ const RegistrationModals:FC<IRegistrationModals> = ({isActive,closeHandler,autho
             password: password
         }
         setCreating(true)
-        const token = await CreateUser(requestData)
+        const tokenData = await CreateUser(requestData,locale)
         setCreating(false)
+        if(!tokenData) {
+            return
+        }
+        if(!tokenData.success) {
+            setLoginErrorText(tokenData?.message)
+            setIsLoginError(true)
+            return
+        }
+        const token = tokenData.token
         if(!token) {
             setLoginErrorText(f('LoginErrorTwo'))
             setIsLoginError(true)

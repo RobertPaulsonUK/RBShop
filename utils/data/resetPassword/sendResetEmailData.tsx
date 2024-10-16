@@ -5,11 +5,13 @@ interface IPromise {
     message : string
 }
 async function SendResetEmail(
-    email : string)
+    email : string,
+    locale : string
+)
     :Promise<IPromise | null>
 {
     try {
-        const response = await fetch(GET_RESET_PASSWORD_EMAIL_ENDPOINT, {
+        const response = await fetch(`${GET_RESET_PASSWORD_EMAIL_ENDPOINT}?lang=${locale}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

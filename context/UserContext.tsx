@@ -4,20 +4,22 @@ import Cookies from "js-cookie";
 import {AUTH_TOKEN_NAME} from "@/utils/constants/constants";
 import CreateSession from "@/utils/data/auth/session/createSession";
 import DeleteSession from "@/utils/data/auth/session/deleteSession";
+import CheckToken from "@/utils/data/auth/checkToken";
 
 interface IUserInterface {
     isLogged: boolean;
     setUserLogged: (token: string) => void;
     unsetUserLogged: () => void;
     getTokenFromCookies: () => string | undefined;
+    locale : string
 }
 
 export const UserContext = createContext<IUserInterface | undefined>(undefined);
 
-export const UserProvider: FC<{ children: ReactNode }> = ({ children }) => {
+export const UserProvider: FC<{ children: ReactNode,locale : string }> = ({ children ,locale}) => {
     const [isLogged, setIsLogged] = useState<boolean>(false);
 
-    useEffect(() => {
+    useEffect(()  => {
         const token = getTokenFromCookies()
         if (token) {
             setIsLogged(true);
@@ -25,6 +27,10 @@ export const UserProvider: FC<{ children: ReactNode }> = ({ children }) => {
             setIsLogged(false);
         }
     }, []);
+
+    const validateToken = async (token : string) => {
+        return await CheckToken(token);
+    }
 
     const setUserLogged = async (token: string) => {
         const session = await CreateSession()
@@ -54,7 +60,7 @@ export const UserProvider: FC<{ children: ReactNode }> = ({ children }) => {
     };
 
     return (
-        <UserContext.Provider value={{ isLogged, setUserLogged, unsetUserLogged, getTokenFromCookies }}>
+        <UserContext.Provider value={{ isLogged, setUserLogged, unsetUserLogged, getTokenFromCookies,locale }}>
             {children}
         </UserContext.Provider>
     );

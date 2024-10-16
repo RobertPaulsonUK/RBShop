@@ -18,8 +18,8 @@ const PopularProducts:FC<IProducts> = ({products}) => {
                     </div>
                     <div className="grid grid-cols-4 gap-x-4 gap-y-10 lg:grid-cols-2 sm:gap-x-2 sm:gap-y-3">
                         {products.length > 0 && products.map(
-                            (product) => (
-                                <ProductSimple key={product.id} product={product}/>
+                            (product,index) => (
+                                <ProductSimple key={index} product={product}/>
                             )
                         )}
                     </div>

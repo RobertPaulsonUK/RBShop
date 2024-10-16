@@ -109,7 +109,8 @@
     "ProductsMultiCount" : " товари",
     "CrosselsTitle" : "Вас може також зацікавити",
     "Total" : "Сума",
-    "LoadingText" : "Зачекайте, кошик завантажується..."
+    "LoadingText" : "Зачекайте, кошик завантажується...",
+    "ToCartText" : "Перейти до кошика"
   },
   "ResetPasswordPage": {
     "FirstPasswordLabel" : "Введіть пароль",

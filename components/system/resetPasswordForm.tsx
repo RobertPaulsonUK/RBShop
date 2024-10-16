@@ -12,12 +12,13 @@ import {useTranslations} from "next-intl";
 interface Props {
     login : string
     resetKey : string
+    locale : string
 }
 interface FormData {
     password : string
     repeatPassword : string
 }
-const ResetPasswordForm:FC<Props> = ({login,resetKey}) => {
+const ResetPasswordForm:FC<Props> = ({login,resetKey,locale}) => {
     const {register,handleSubmit,formState: { errors },watch,reset} = useForm()
     const [isSending,setIsSending] = useState<boolean>(false)
     const [message,setMessage] = useState<null | string>(null)
@@ -36,7 +37,7 @@ const ResetPasswordForm:FC<Props> = ({login,resetKey}) => {
             key : resetKey,
             password : data.password
         }
-        const result = await UpdateUserPassword({requestData : sendData})
+        const result = await UpdateUserPassword({requestData : sendData,locale})
         if(result) {
             setMessage(result.message)
             if(result.success) {

@@ -9,7 +9,7 @@ const SearchList:FC<ISearchInterface> = ({searchItems}) => {
                 {
                     searchItems && searchItems.length && searchItems.map(
                         (item,index) => (
-                            <SearchItem key={item.id} title={item.title} url={item.url} imageUrl={item.imageUrl}/>
+                            <SearchItem key={index} title={item.title} url={item.url} imageUrl={item.imageUrl} id={item.id}/>
                         )
                     )
                 }

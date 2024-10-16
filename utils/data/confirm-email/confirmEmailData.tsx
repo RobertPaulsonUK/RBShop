@@ -4,7 +4,7 @@ interface IPromise {
     success : boolean
     message : string
 }
-async function ConfirmEmailData(token : string | undefined,hash : string | null):Promise<IPromise | null>{
+async function ConfirmEmailData(token : string | undefined,hash : string | null, locale : string):Promise<IPromise | null>{
     const headers = {};
     if (token) {
         headers['Authorization'] = `Bearer ${token}`;
@@ -18,7 +18,7 @@ async function ConfirmEmailData(token : string | undefined,hash : string | null)
     }
 
     try {
-        const response = await fetch(`${CONFIRM_EMAIL_ENDPOINT}?emailkey=${hash}`, {
+        const response = await fetch(`${CONFIRM_EMAIL_ENDPOINT}?lang=${locale}&emailkey=${hash}`, {
             method: 'GET',
             headers: {
                 ...headers,

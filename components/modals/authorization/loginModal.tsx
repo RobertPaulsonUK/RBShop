@@ -19,7 +19,7 @@ interface ILoginModal {
 const LoginModal:FC<ILoginModal> = ({isActive,closeHandler,registerHandler,errorHandler,resetPasswordHandler}) => {
     const t = useTranslations('AuthorisationText')
     const f = useTranslations('AuthorisationForm')
-    const {setUserLogged,isLogged} = useUser()
+    const {setUserLogged,isLogged,locale} = useUser()
     const errors = {
         login : f('LoginError'),
         password : f('PasswordError'),
@@ -72,7 +72,7 @@ const LoginModal:FC<ILoginModal> = ({isActive,closeHandler,registerHandler,error
             password: password
         }
         setLogging(true)
-        const token = await CreateToken(requestData)
+        const token = await CreateToken(requestData,locale)
         setLogging(false)
         if(!token) {
             errorHandler()

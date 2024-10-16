@@ -5,9 +5,9 @@ interface IRequestData {
     password : string
 }
 
-async function CreateToken(requestData: IRequestData){
+async function CreateToken(requestData: IRequestData,locale : string){
     try {
-        const response = await fetch(GET_USER_TOKEN, {
+        const response = await fetch(`${GET_USER_TOKEN}?lang=${locale}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

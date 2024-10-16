@@ -11,13 +11,15 @@ import CartModal from "@/components/modals/cart/cartModal";
 import {WishlistProvider} from "@/context/WishlistContext";
 import SuccessAddToWishlist from "@/components/modals/wishlist/successAddToWishlist";
 import ContactModal from "@/components/modals/contact-form/contactModal";
+import CartErrorModal from "@/components/modals/cart/cartErrorModal";
+import CartGeneralErrorModal from "@/components/modals/cart/cartGeneralErrorModal";
 
 export default async function Layout({children,locale}) {
     const headerData = await HeaderData({locale})
     const footerData = await FooterData({locale})
     return (
         <>
-            <UserProvider>
+            <UserProvider locale={locale}>
                 <ModalsProvider>
                     <CartProvider locale={locale}>
                         <WishlistProvider locale={locale}>
@@ -30,6 +32,8 @@ export default async function Layout({children,locale}) {
                                 {footerData && <Footer footerData={footerData}/>}
                                 <AuthorizationModals></AuthorizationModals>
                                 <CartModal/>
+                                <CartErrorModal/>
+                                <CartGeneralErrorModal/>
                                 <ContactModal/>
                                 <SuccessAddToWishlist/>
                             </div>

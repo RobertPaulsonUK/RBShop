@@ -10,8 +10,8 @@ export default async function Brands () {
                 <div className="container">
                     <div className="flex justify-center items-center">
                         {brands && brands.length > 0 && brands.map(
-                            (brand) => (
-                                <BrandItem key={brand.id} brand={brand}/>
+                            (brand,index) => (
+                                <BrandItem key={index} brand={brand}/>
                             )
                         )}
                     </div>

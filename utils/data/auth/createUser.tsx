@@ -5,23 +5,27 @@ interface IRequestData {
     password : string
 }
 
-async function CreateUser(requestData: IRequestData){
+async function CreateUser(requestData: IRequestData,locale : string){
     try {
-        const response = await fetch(CREATE_USER_ENDPOINT, {
+        const response = await fetch(`${CREATE_USER_ENDPOINT}?lang=${locale}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(requestData),
         });
-        if (!response.ok) {
-            throw new Error(`Ошибка ${response.status}: ${response.statusText}`);
-        }
-
         const data = await response.json();
-
+        if (!response.ok) {
+            return {
+                success : false,
+                message : data.message
+            }
+        }
         if (data.token) {
-            return data.token
+            return {
+                success : true,
+                token : data.token
+            }
         } else {
             console.error('Authentication failed');
             return null

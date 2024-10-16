@@ -109,7 +109,8 @@
     "ProductsMultiCount": " товара",
     "CrosselsTitle": "Вас также может заинтересовать",
     "Total": "Сумма",
-    "LoadingText" : "Подождите, корзина загружается..."
+    "LoadingText" : "Подождите, корзина загружается...",
+    "ToCartText" : "Перейти к корзине"
   },
   "ResetPasswordPage": {
     "FirstPasswordLabel": "Введите пароль",

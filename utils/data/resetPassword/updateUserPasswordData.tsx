@@ -10,11 +10,11 @@ interface Props {
     password : string
 }
 async function UpdateUserPassword(
-    {requestData} : {requestData : Props} )
+    {requestData,locale} : {requestData : Props,locale : string} )
     :Promise<IPromise | null>
 {
     try {
-        const response = await fetch(UPDATE_RESET_PASSWORD_DATA_ENDPOINT, {
+        const response = await fetch(`${UPDATE_RESET_PASSWORD_DATA_ENDPOINT}?lang=${locale}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

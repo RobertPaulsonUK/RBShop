@@ -42,7 +42,8 @@ async function DeleteCartData(requestData: IRequestData){
                 items : data.items,
                 cross_sells : data.cross_sells,
                 count : parseInt(data.item_count),
-                total : parseInt(data.totals.total)
+                total : parseInt(data.totals.total),
+                errors : data.notices?.error
             }
         } else {
             console.error('Get cart failed');

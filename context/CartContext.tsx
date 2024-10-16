@@ -17,32 +17,44 @@ interface ICartInterface {
             cross_sells : ICrossSellsInterface[] | []
             count : number
             total : number
+            errors : [] | undefined
             }
     addToCartHandler : (id : number,quantity : number) => void
     updateCartItemHandler : (key : string,qty : number) => void
     removeFromCartHandler : (key : string) => void
+    updateGeneralError : (value : string | null) => void
     currency : string
     locale : string
     dataLoading : boolean
+    generalError : string | null
 }
 export const CartContext = createContext<ICartInterface | undefined>(undefined)
 
 export const CartProvider:FC<{ children: ReactNode ,locale : string}> = ({ children ,locale}) => {
-    const {modalsHandlers : {cartHandler}} = useModals()
+    const {modalsHandlers : {cartHandler,cartErrorHandler}} = useModals()
     const {isLogged,getTokenFromCookies} = useUser()
     const [dataLoading,setDataLoading] = useState<boolean>(true)
     const [cart,setCart] = useState({
         items : [],
         cross_sells : [],
         count : 0,
-        total : 0
+        total : 0,
+        errors : undefined
     })
+    const [generalError,setGeneralError] = useState<null | string>(null)
     const [cartCount,setCartCount] =useState<number>(0)
     useEffect(() => {
         setDataLoading(true)
         getCartItems()
     }, [isLogged]);
-
+    useEffect(() => {
+        if(cart.errors?.length > 0) {
+            cartErrorHandler(true)
+        }
+        else {
+            cartErrorHandler(false)
+        }
+    }, [cart]);
     const addToCartHandler = async (id: number,qty : number = 1) => {
         const token = getTokenFromCookies()
         let cartData = null
@@ -53,9 +65,11 @@ export const CartProvider:FC<{ children: ReactNode ,locale : string}> = ({ child
         if(token) {
             cartData = await AddTocArt({token : token,productId : id,quantity : qty, locale})
         }
-        if(cartData) {
-            setCart(cartData)
+        if(cartData?.success) {
+            setCart(cartData?.res)
             cartHandler(true)
+        } else {
+            setGeneralError(cartData?.res)
         }
     }
     const removeFromCartHandler = async (key : string) => {
@@ -113,16 +127,20 @@ export const CartProvider:FC<{ children: ReactNode ,locale : string}> = ({ child
 
         return key
     }
-
+    const updateGeneralError = (value : string | null) => {
+        setGeneralError(value)
+    }
     return(
         <CartContext.Provider value={{
             cart,
             addToCartHandler,
             removeFromCartHandler,
             updateCartItemHandler,
+            updateGeneralError,
             currency : 'грн',
             locale,
-            dataLoading
+            dataLoading,
+            generalError
         }}>
             {children}
         </CartContext.Provider>

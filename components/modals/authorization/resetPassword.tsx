@@ -8,6 +8,7 @@ import AnimatedTextButton from "@/components/ui/animatedTextButton";
 import SendResetEmailData from "@/utils/data/resetPassword/sendResetEmailData";
 import ExpiredModal from "@/components/modals/general/expiredModal";
 import {useTranslations} from "next-intl";
+import {useUser} from "@/hooks/UserHook";
 
 interface Props {
     closeHandler : () => void
@@ -16,6 +17,7 @@ interface Props {
 const ResetPasswordModal:FC<Props> = ({closeHandler,isActive}) => {
     const t = useTranslations('AuthorisationText')
     const f = useTranslations('AuthorisationForm')
+    const {locale} = useUser()
     const {register,handleSubmit,formState: { errors }} = useForm()
     const [isSending,setIsSending] = useState<boolean>(false)
     const [isDisabled,setIsDisabled] = useState<boolean>(true)
@@ -28,7 +30,7 @@ const ResetPasswordModal:FC<Props> = ({closeHandler,isActive}) => {
     }, [message]);
     const onFormSubmit:SubmitHandler<{user_email : string}> = async (data) => {
        setIsSending(true)
-        const result = await SendResetEmailData(data.user_email)
+        const result = await SendResetEmailData(data.user_email,locale)
         if(result) {
             setMessage(result.message)
         }

@@ -21,8 +21,8 @@ export default async function Home(searchParams) {
               {data?.pageMenu && <HomeNavigation navItems={data.pageMenu}/>}
               {data?.saleProducts && (
                   <HomeSlider>
-                      {data.saleProducts.map((product) => (
-                          <SaleProduct key={product.id} product={product} />
+                      {data.saleProducts.map((product,index) => (
+                          <SaleProduct key={index} product={product} />
                       ))}
                   </HomeSlider>
               )}

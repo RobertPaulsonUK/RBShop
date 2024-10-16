@@ -37,18 +37,24 @@ async function AddTocArt(requestData: IRequestData){
             },
             body: JSON.stringify(requestBody),
         });
-        if (!response.ok) {
-            throw new Error(`Ошибка ${response.status}: ${response.statusText}`);
-        }
-
         const data = await response.json();
+        if (!response.ok) {
+            return {
+                success : false,
+                res : data.message
+            }
+        }
 
         if (data) {
             return {
-                items : data.items,
-                cross_sells : data.cross_sells,
-                count : parseInt(data.item_count),
-                total : parseInt(data.totals.total)
+                success : true,
+                res : {
+                    items : data.items,
+                    cross_sells : data.cross_sells,
+                    count : parseInt(data.item_count),
+                    total : parseInt(data.totals.total),
+                    errors : data.notices?.error
+                }
             }
         } else {
             console.error('Get cart failed');
