@@ -5,6 +5,7 @@ export interface IContactsPageInterface {
     title: string
     breadcrumbs: IBreadcrumb[]
     data: IContactsData
+    schema : any
 }
 export interface IContactsData {
     workTime: string

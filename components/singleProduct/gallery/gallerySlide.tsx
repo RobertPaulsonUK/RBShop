@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const GallerySlide:FC<{src : string,index : number}> = ({src,index}) => {
     return(
-        <div className="good__slider-slide ">
+        <div className="good__slider-slide cursor-grab">
             <Image
                 className="w-full pointer-events-none"
                 src={src}

@@ -1,13 +1,14 @@
 "use client"
-import {FC,useState} from "react";
+import {FC} from "react";
 import Image from "next/image";
 
-const GalleryMini:FC<{galleryItems : string[], clickHandler: (index: number) => void }> = ({galleryItems,clickHandler}) => {
-    const [activeIndex,setActiveIndex] = useState(0)
-    const imageClickHandler = (index : number) => {
-        setActiveIndex(index)
-        clickHandler(index)
-    }
+interface Props {
+    galleryItems : string[]
+    clickHandler : (index : number) => void
+    activeIndex : number
+}
+const GalleryMini:FC<Props> = ({galleryItems,clickHandler,activeIndex}) => {
+
     return(
         <div  className="gallery-thumbnails mb-12 lg:m-0">
                 {galleryItems.length > 0 &&galleryItems.map(
@@ -16,7 +17,7 @@ const GalleryMini:FC<{galleryItems : string[], clickHandler: (index: number) => 
                             <Image src={item}
                                    width={76}
                                    height={76}
-                                   onClick={() => imageClickHandler(index)}
+                                   onClick={() => clickHandler(index)}
                                    alt={`mini-slide-${index + 1}`}/>
                         </div>
                     )

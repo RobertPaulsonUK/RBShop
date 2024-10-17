@@ -5,6 +5,7 @@ export interface IShopInterface {
     breadcrumbs : IBreadcrumb[]
     products : IProductFullInterface[]
     pagination : IPagination
+    schema : any
 }
 export interface IBreadcrumb {
     id : number

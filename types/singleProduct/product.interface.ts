@@ -7,6 +7,7 @@ export interface ISingleProductInterface {
     paymentMethods: IMethodInterface
     shippingMethods: IMethodInterface
     relatedProducts: IProductFullInterface[]
+    schema : any
 }
 export interface IProductInterface extends IProductFullInterface{
     description : string

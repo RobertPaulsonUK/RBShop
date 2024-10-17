@@ -1,4 +1,4 @@
-import {Metadata} from "next";
+import {Metadata, ResolvingMetadata} from "next";
 import ShopData from "@/utils/data/shopData";
 import Breadcrumbs from "@/components/breadcrumbs/breadcrumbs";
 import Products from "@/components/shop/products";
@@ -7,15 +7,28 @@ import Filters from "@/components/filters/filters";
 import Pagination from "@/components/shop/pagination/pagination";
 import Brands from "@/components/brands/brands";
 import ShopTitle from "@/components/shop/shopTitle";
+import {GET_METADATA_ENDPOINT} from "@/utils/constants/endpoints";
+import {useMetadata} from "@/hooks/MetadataHook";
 
-export const metadata: Metadata = {
-    title: "Shop",
-};
+export async function generateMetadata(
+    { params },
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const data = await fetch(`${GET_METADATA_ENDPOINT}/shop?lang=${params.locale}`).then((res) => res.json())
+    return useMetadata(data)
+}
 export default async function Shop({searchParams,params}: { searchParams: { [key: string]: string } }) {
     const data = await ShopData(searchParams,params.locale)
     const filtersData = await FiltersData(params.locale)
     return(
         <>
+            {data?.schema &&
+                <>
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.schema) }}
+                    />
+                </>}
             {data?.breadcrumbs && <Breadcrumbs items={data.breadcrumbs}/>}
             <section>
                 <div className="container">

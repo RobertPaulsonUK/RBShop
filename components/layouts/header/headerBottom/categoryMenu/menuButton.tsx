@@ -21,7 +21,7 @@ const MenuButton:FC<IInterface> = ({toggleMenu}) => {
                     width={25}
                     height={25}
                 />
-                <div className="text-lg font-medium text-[#F6F6F6] md:hidden">
+                <div className="text-lg font-medium text-[#F6F6F6] whitespace-nowrap md:hidden">
                     {t('CategoryMenuTitle')}
                 </div>
             </button>

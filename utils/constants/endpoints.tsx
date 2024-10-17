@@ -19,3 +19,4 @@ export const GET_CONTACT_PAGE_DATA_ENDPOINT = `${ process.env.NEXT_PUBLIC_WORDPR
 export const GET_ABOUT_US_DATA_ENDPOINT = `${ process.env.NEXT_PUBLIC_WORDPRESS_SITE_URL }/wp-json/rp-api/v1/about`;
 export const GET_PAYMENT_AND_DELIVERY_DATA_ENDPOINT = `${ process.env.NEXT_PUBLIC_WORDPRESS_SITE_URL }/wp-json/rp-api/v1/payment-and-delivery`;
 export const GET_PRIVACY_POLICY_DATA_ENDPOINT = `${ process.env.NEXT_PUBLIC_WORDPRESS_SITE_URL }/wp-json/rp-api/v1/privacy-policy`;
+export const GET_METADATA_ENDPOINT = `${process.env.NEXT_PUBLIC_WORDPRESS_SITE_URL}/wp-json/rp-api/v1/seo`

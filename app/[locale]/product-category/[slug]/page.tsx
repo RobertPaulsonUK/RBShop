@@ -6,7 +6,19 @@ import Products from "@/components/shop/products";
 import Pagination from "@/components/shop/pagination/pagination";
 import Brands from "@/components/brands/brands";
 import ShopTitle from "@/components/shop/shopTitle";
+import {Metadata, ResolvingMetadata} from "next";
+import {GET_METADATA_ENDPOINT} from "@/utils/constants/endpoints";
+import {useMetadata} from "@/hooks/MetadataHook";
 
+export async function generateMetadata(
+    { params },
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const {locale,slug} = params
+
+    // const data = await fetch(`${GET_METADATA_ENDPOINT}/${slug}?lang=${locale}`).then((res) => res.json())
+    // return useMetadata(data)
+}
 export default async function Category({params,searchParams}: { params : { [key: string]: string },searchParams: { [key: string]: string } }) {
 
     const {locale,slug} = params
@@ -14,6 +26,13 @@ export default async function Category({params,searchParams}: { params : { [key:
     const filtersData = await FiltersData(locale,slug)
     return(
         <>
+            {data?.schema &&
+                <>
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.schema) }}
+                    />
+                </>}
             {data?.breadcrumbs && <Breadcrumbs items={data.breadcrumbs}/>}
             <section>
                 <div className="container">

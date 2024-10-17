@@ -15,7 +15,7 @@ const SimpleAddToCart:FC<IAddToCart> = ({id,stockStatus,stock}) => {
     const {addToCartHandler,cart: {items},generalError} = useCart()
     const [isInCart,setIsInCart] = useState(false)
     const [cartQuantity,setCartQuantity] = useState(0)
-    const [isDisabled,setIsDisabled] = useState(false)
+    const [isDisabled,setIsDisabled] = useState(true)
     const [isAdding,setIsAdding] = useState(false)
     const t = useTranslations('Product')
     useEffect(() => {
@@ -24,7 +24,7 @@ const SimpleAddToCart:FC<IAddToCart> = ({id,stockStatus,stock}) => {
     useEffect(() => {
         setIsAdding(false)
         checkIsDisabled()
-    }, [cartQuantity,generalError]);
+    }, [cartQuantity]);
     const checkIsInCart = () => {
         if(items.length === 0) {
             setIsInCart(false)
@@ -39,11 +39,10 @@ const SimpleAddToCart:FC<IAddToCart> = ({id,stockStatus,stock}) => {
         })
     }
     const checkIsDisabled = () => {
-        if(stockStatus === 'outofstock') {
-            setIsDisabled(true)
-        }
         if(isInCart && stock === cartQuantity) {
             setIsDisabled(true)
+        } else {
+            setIsDisabled(stockStatus === 'outofstock')
         }
     }
     const buttonClickHandler = () => {

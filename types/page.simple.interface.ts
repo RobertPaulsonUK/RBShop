@@ -5,4 +5,5 @@ export interface IPageSimpleInterface {
     id : string
     breadcrumbs : IBreadcrumb[]
     content : string
+    schema : any
 }

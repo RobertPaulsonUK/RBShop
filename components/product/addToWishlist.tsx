@@ -40,8 +40,8 @@ const AddToWishlist:FC<{className? : string ,id : number}> = ({className,id}) =>
                 <Link
                     onClick={(e) => {
                         e.preventDefault()
-                        setIsDisabled(true)
                         if(isLogged) {
+                            setIsDisabled(true)
                             addToWishlist(id)
                         } else  {
                             authHandler()

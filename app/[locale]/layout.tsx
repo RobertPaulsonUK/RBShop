@@ -16,10 +16,7 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-    title: {
-        template: '%s | Strum',
-        default: 'Home',
-    },
+    title: "Strum",
     description: "Some text from layout"
 }
 export default async function RootLayout({

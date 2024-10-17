@@ -1,5 +1,5 @@
 "use client"
-import {FC,useState} from "react";
+import {FC, useEffect, useState} from "react";
 import { useSwipeable } from "react-swipeable";
 import GallerySlide from "@/components/singleProduct/gallery/gallerySlide";
 import "./gallery-style.scss"
@@ -13,6 +13,10 @@ interface IGallery {
 const ProductGallery:FC<IGallery> = ({mainImage,galleryImages}) => {
     const [startWidth,setStartWidth] = useState(0)
     const [currentIndex, setCurrentIndex] = useState(0)
+    useEffect(() => {
+        setStartWidth(0)
+        setCurrentIndex(0)
+    }, []);
     const readyGallery = [mainImage, ...galleryImages]
     const setCurrentTranslateWidth = (index) => {
         let slideWidth = document.querySelector('.product-slider-wrapper').clientWidth
@@ -52,7 +56,9 @@ const ProductGallery:FC<IGallery> = ({mainImage,galleryImages}) => {
                     )}
                 </GalleryWrapper>
             </div>
-            <GalleryMini galleryItems={readyGallery} clickHandler={setCurrentTranslateWidth}/>
+            <GalleryMini galleryItems={readyGallery}
+                         activeIndex={currentIndex}
+                         clickHandler={setCurrentTranslateWidth}/>
         </>
     )
 }

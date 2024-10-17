@@ -1,5 +1,6 @@
 import {IProductSimpleInterface} from "@/types/products/product.simple.interface";
 import {IProductFullInterface} from "@/types/products/product.full.interface";
+import {Schema} from "@/types/seo.interface";
 
 export interface IHome {
     id: number
@@ -8,6 +9,7 @@ export interface IHome {
     pageMenu: IPageMenu[]
     saleProducts: IProductSimpleInterface[]
     popularProducts: IProductFullInterface[]
+    schema : any
 }
 
 export interface IPageMenu {
