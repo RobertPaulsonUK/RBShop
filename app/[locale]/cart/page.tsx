@@ -11,7 +11,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
 
     const data = await fetch(`${GET_METADATA_ENDPOINT}/cart?lang=${params.locale}`).then((res) => res.json())
-    return useMetadata(data.data)
+    return useMetadata(data?.data)
 }
 
 export default function CartPage() {

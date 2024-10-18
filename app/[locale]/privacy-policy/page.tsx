@@ -12,7 +12,7 @@ export async function generateMetadata(
     parent: ResolvingMetadata
 ): Promise<Metadata> {
     const data = await fetch(`${GET_METADATA_ENDPOINT}/privacy-policy?lang=${params.locale}`).then((res) => res.json())
-    return useMetadata(data.data)
+    return useMetadata(data?.data)
 }
 export default async function PrivacyPolicy(searchParams) {
     const {params} = searchParams

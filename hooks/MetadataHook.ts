@@ -1,6 +1,9 @@
 import {SeoInterface} from "@/types/seo.interface";
 
-export const useMetadata = (metadata : SeoInterface) => {
+export const useMetadata = (metadata : SeoInterface | undefined) => {
+    if(!metadata) {
+        return {}
+    }
     const ogImage = metadata.og_images ? [
         {
             url: metadata.og_images.url,

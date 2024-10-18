@@ -13,10 +13,11 @@ export async function generateMetadata(
     parent: ResolvingMetadata
 ): Promise<Metadata> {
     const data = await fetch(`${GET_METADATA_ENDPOINT}/home?lang=${params.locale}`).then((res) => res.json())
-    return useMetadata(data.data)
+    return useMetadata(data?.data)
 }
 export default async function Home({params}) {
     const data = await HomeData(params.locale)
+
     return (
         <>
             {data?.schema &&

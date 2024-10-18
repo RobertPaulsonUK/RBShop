@@ -14,7 +14,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
 
     const data = await fetch(`${GET_METADATA_ENDPOINT}/cabinet?lang=${params.locale}`).then((res) => res.json())
-    return useMetadata(data.data)
+    return useMetadata(data?.data)
 }
 export default async function Cabinet({searchParams,params}: { searchParams: { [key: string]: string },params: { [key: string]: string } }) {
     const cookieStore = cookies()
