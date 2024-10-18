@@ -23,7 +23,7 @@ export default async function Layout({children,locale}) {
                 <ModalsProvider>
                     <CartProvider locale={locale}>
                         <WishlistProvider locale={locale}>
-                            {headerData && <Header headerData={headerData}/>}
+                            {headerData && <Header headerData={headerData} locale={locale}/>}
                             <div className="wrapper">
                                 <main className={"main"}>
                                     {children}

@@ -17,11 +17,11 @@ const SearchBar:FC<ISearchBar> = ({query,setQuery,isOpen,setIsOpen,products}) =>
     const t = useTranslations('Header');
     return(
         <>
-            <form method={"GET"} action={"/shop"}  className={`header__search relative min-h-10 w-full pl-5 pr-[1px] flex items-center justify-between bg-[#F6F6F6] shadow_mod md:pl-0 md:w-[40px] md:h-[35px] md:duration-200 ${products.length > 0 ? 'rounded-[0]' : 'rounded-[48px]'} ${isOpen ? 'active' : ''}`}
+            <form method={"GET"} action={"/shop"}  className={`header__search relative min-h-10 w-full pl-5 pr-[1px] flex items-center justify-between bg-[#F6F6F6] shadow_mod md:pl-0 md:w-[40px] md:h-[35px] md:duration-200 ${(products.length > 0 && query.length > 2) ? 'rounded-[0]' : 'rounded-[48px]'} ${isOpen ? 'active' : ''}`}
                    id="search-input">
 
                 <input
-                    className={`search__inpt min-h-10 w-full bg-[#F6F6F6] duration-200 outline-none hover:placeholder:text-[#46B1F0] focus:text-black md:w-0 rounded-[48px] ${isOpen ? 'active' : ''}`}
+                    className={`search__inpt min-h-10 w-full bg-[#F6F6F6] duration-200 outline-none hover:placeholder:text-[#46B1F0] focus:text-black md:w-0 rounded-[48px] ${(isOpen) ? 'active' : ''}`}
                     type={"text"}
                     placeholder={t('SearchPlaceholder')}
                     name={"s"}
@@ -42,7 +42,7 @@ const SearchBar:FC<ISearchBar> = ({query,setQuery,isOpen,setIsOpen,products}) =>
                 >
                     <SearchIcon isActive={false}/>
                 </Link>
-                {products.length > 0 && <SearchList searchItems={products}/>}
+                {(query.length > 2 && products.length > 0) && <SearchList searchItems={products}/>}
 
             </form>
         </>

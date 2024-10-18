@@ -11,7 +11,7 @@ export async function generateMetadata(
     parent: ResolvingMetadata
 ): Promise<Metadata> {
     const data = await fetch(`${GET_METADATA_ENDPOINT}/about-us?lang=${params.locale}`).then((res) => res.json())
-    return useMetadata(data)
+    return useMetadata(data.data)
 }
 export default async function AboutUs({params}) {
     const pageData = await GetAboutUsPageData(params.locale)

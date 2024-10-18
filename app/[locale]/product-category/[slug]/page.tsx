@@ -16,8 +16,8 @@ export async function generateMetadata(
 ): Promise<Metadata> {
     const {locale,slug} = params
 
-    // const data = await fetch(`${GET_METADATA_ENDPOINT}/${slug}?lang=${locale}`).then((res) => res.json())
-    // return useMetadata(data)
+    const data = await fetch(`${GET_METADATA_ENDPOINT}/${slug}?lang=${locale}`).then((res) => res.json())
+    return useMetadata(data.data)
 }
 export default async function Category({params,searchParams}: { params : { [key: string]: string },searchParams: { [key: string]: string } }) {
 

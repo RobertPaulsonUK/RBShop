@@ -1,5 +1,5 @@
 "use client"
-import {FC, useState,useEffect} from "react";
+import {FC} from "react";
 import {IBottomMenu} from "@/types/header.interface";
 import MenuButton from "@/components/layouts/header/headerBottom/categoryMenu/menuButton";
 import CategoryMenuItem from "@/components/layouts/header/headerBottom/categoryMenu/menuItem";

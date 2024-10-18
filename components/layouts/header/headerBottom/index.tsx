@@ -7,12 +7,12 @@ import CloseButton from "@/components/layouts/header/headerBottom/closeButton";
 import SearchBar from "@/components/layouts/header/headerBottom/search/searchBar";
 import axios from "axios";
 import {SEARCH_AJAX_ENDPOINT} from "@/utils/constants/endpoints";
-import {log} from "util";
 
 interface IBottomMenuInterface {
     bottomMenu : IBottomMenu[]
+    locale : string
 }
-const HeaderBottom:FC<IBottomMenuInterface> = ({bottomMenu}) => {
+const HeaderBottom:FC<IBottomMenuInterface> = ({bottomMenu,locale}) => {
     const [query, setQuery] = useState('');
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -20,7 +20,7 @@ const HeaderBottom:FC<IBottomMenuInterface> = ({bottomMenu}) => {
     const fetchProducts = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(`${SEARCH_AJAX_ENDPOINT}?s=${query}`);
+            const response = await axios.get(`${SEARCH_AJAX_ENDPOINT}?s=${query}&lang=${locale}`);
             setProducts(response.data);
         } catch (error) {
             console.error('Error fetching products:', error);

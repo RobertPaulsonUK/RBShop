@@ -5,6 +5,7 @@ export interface ICabinetInterface {
     userData: IUserDataInterface
     activeOrders: IOrderInterface[] | []
     completedOrders: IOrderInterface[] | []
+    schema : any
 }
 
 export interface IUserDataInterface {

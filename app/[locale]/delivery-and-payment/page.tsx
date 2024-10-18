@@ -10,7 +10,7 @@ export async function generateMetadata(
     parent: ResolvingMetadata
 ): Promise<Metadata> {
     const data = await fetch(`${GET_METADATA_ENDPOINT}/delivery-and-payment?lang=${params.locale}`).then((res) => res.json())
-    return useMetadata(data)
+    return useMetadata(data.data)
 }
 export default async function DeliveryAndPayment(searchParams) {
     const {params} = searchParams
